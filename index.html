@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container topbar-content">
+
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="logo">
+    </a>
+
+    <div class="top-info">
+
+      <div class="info-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span> Vinoda Hospital, Hyderabad</span>
+      </div>
+<!-- 
+      <div class="info-item">
+        <i class="fa-solid fa-comment"></i>
+        <span>Se Habla Español</span>
+      </div> -->
+
+      <div class="info-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>(000) 000-0000</span>
+      </div>
+
+      <button class="btn">Schedule Appointment</button>
+
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container nav-content">
+
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+
+      <li><a href="index.html" >Home</a></li>
+
+      <li><a href="about.html">About</a></li>
+
+      <li class="dropdown">
+        <a href="services.html">All Services <i class="fa-solid fa-angle-down"></i></a>
+
+        <ul class="dropdown-menu">
+          <li><a href="general-dentistry.html">General Dentistry</a></li>
+          <li><a href="cosmetic-dentistry.html">Cosmetic Dentistry</a></li>
+          <li><a href="braces.html">Braces</a></li>
+        </ul>
+      </li>
+
+     
+      <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+  </div>
+</nav>
+
+<script>
+const toggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+toggle.onclick = () => {
+  navLinks.classList.toggle('active');
+};
+</script>
+
+</body>
+</html>
