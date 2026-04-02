@@ -2,42 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Font Awesome -->
+<title>Vinoda Dental Hospital</title>
+
+<link rel="icon" href="images/favicon.png">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
 
 <!-- TOPBAR -->
 <div class="topbar">
   <div class="container topbar-content">
 
-    <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="logo">
-    </a>
+    <!-- LEFT -->
+    <div class="left">
+      <a href="index.html">
+        <img src="images/logo.png" class="logo">
+      </a>
+    </div>
 
-    <div class="top-info">
-
+    <!-- CENTER -->
+    <div class="center-info">
       <div class="info-item">
         <i class="fa-solid fa-location-dot"></i>
-        <span> Vinoda Hospital, Hyderabad</span>
+        <span>Vinoda Hospital, Hyderabad</span>
       </div>
-<!-- 
-      <div class="info-item">
-        <i class="fa-solid fa-comment"></i>
-        <span>Se Habla Español</span>
-      </div> -->
 
       <div class="info-item">
         <i class="fa-solid fa-phone"></i>
         <span>(000) 000-0000</span>
       </div>
-
-      <button class="btn">Schedule Appointment</button>
-
     </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+      <a href="#" class="btn">Schedule Appointment</a>
+    </div>
+
   </div>
 </div>
 
@@ -45,27 +51,27 @@
 <nav class="navbar">
   <div class="container nav-content">
 
+    <!-- HAMBURGER -->
     <div class="menu-toggle" id="menu-toggle">
       <i class="fa-solid fa-bars"></i>
     </div>
 
+    <!-- MENU -->
     <ul class="nav-links" id="nav-links">
 
-      <li><a href="index.html" >Home</a></li>
-
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
 
       <li class="dropdown">
-        <a href="services.html">All Services <i class="fa-solid fa-angle-down"></i></a>
+        <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
 
         <ul class="dropdown-menu">
-          <li><a href="general-dentistry.html">General Dentistry</a></li>
-          <li><a href="cosmetic-dentistry.html">Cosmetic Dentistry</a></li>
+          <li><a href="general.html">General Dentistry</a></li>
+          <li><a href="cosmetic.html">Cosmetic Dentistry</a></li>
           <li><a href="braces.html">Braces</a></li>
         </ul>
       </li>
 
-     
       <li><a href="contact.html">Contact</a></li>
 
     </ul>
@@ -77,10 +83,31 @@
 const toggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
 
+// MOBILE MENU
 toggle.onclick = () => {
   navLinks.classList.toggle('active');
 };
-</script>
 
+// SERVICES CLICK (ONLY TO OPEN, NOT CLOSE ON CHILD CLICK)
+document.querySelectorAll('.dropdown').forEach(drop => {
+  
+  const btn = drop.querySelector('a');
+  const menu = drop.querySelector('.dropdown-menu');
+
+  btn.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      e.stopPropagation();
+      menu.classList.toggle('show');
+    }
+  });
+
+  // 🔥 IMPORTANT FIX: stop closing when clicking inside submenu
+  menu.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+
+});
+</script>
 </body>
 </html>
