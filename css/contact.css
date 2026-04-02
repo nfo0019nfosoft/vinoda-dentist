@@ -305,7 +305,7 @@
 }
 
 .form-container h2 {
-    font-size: 32px;
+    font-size: 30px;
     margin: 0 0 10px 0;
     text-align: center;
 }
@@ -344,7 +344,7 @@
 }
 
 .submit-btn {
-    background-color: #0193bc;
+    background-color: #ff6600;
     color: white;
     border: none;
     padding: 15px;
@@ -358,7 +358,7 @@
 }
 
 .submit-btn:hover {
-    background-color: #ff6600;
+    background-color: #0193bc;
 }
 
 /* RIGHT INFO CONTAINER (2 PER ROW) */

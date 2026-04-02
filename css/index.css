@@ -569,6 +569,7 @@
     color: #0092bc;
     font-size: 34px;
     font-weight: 800;
+    text-transform: uppercase;
     line-height: 1.2;
     margin-bottom: 15px;
     max-width: 80%; /* Text ni card lopale unchadaniki */
@@ -905,8 +906,7 @@ body {
 .insurance-marquee-wrapper marquee img {
     height: 60px; /* Logo height adjust cheyandi */
     margin: 0 40px;
-    filter: brightness(0) invert(1); /* Logos white ga kanipinchadaniki (Optional) */
-    transition: 0.3s;
+  
 }
 
 .insurance-marquee-wrapper marquee img:hover {
@@ -989,7 +989,7 @@ body {
 }
 
 .section-main-title {
-    color: #002233;
+    color: var(--vinoda-blue);
     font-size: 36px;
     font-weight: 800;
 }
@@ -1039,7 +1039,7 @@ body {
 
 .feature-item h3 {
     font-size: 19px;
-    color: #002233;
+    color: var(--vinoda-blue);
     margin-bottom: 20px;
     font-weight: 700;
     min-height: 55px;
@@ -1213,6 +1213,7 @@ body {
 .form-container h2 {
     font-size: 32px;
     margin: 0 0 10px 0;
+    text-transform: uppercase;
     text-align: center;
 }
 
@@ -1359,4 +1360,229 @@ body {
     .info-grid {
         grid-template-columns: 1fr; /* 1 per row for small mobiles */
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-footer {
+    background-color:#005f7a;
+    color: #ffffff;
+    padding: 40px 0 20px; /* Reduced padding */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 60px; /* Adjust based on your logo */
+    width: auto;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-links a {
+    width: 35px;
+    height: 35px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.social-links a:hover {
+    background: #0193bc;
+    transform: translateY(-2px);
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    margin-bottom: 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* CAPITALIZED HEADINGS */
+.footer-col h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase; /* Capital Letters */
+    letter-spacing: 1px;
+}
+
+.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col ul li { margin-bottom: 8px; }
+.footer-col ul li a {
+    color: #b0b8c1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover { color: #0193bc; }
+
+.hours-list p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    text-decoration: none;
+    color: #b0b8c1;
+    margin-bottom: 6px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 4px;
+}
+
+.orange-text { color: #ff6600; font-weight: bold; }
+
+.contact-info p {
+    font-size: 14px;
+    color: #b0b8c1;
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.footer-btn {
+    display: inline-block;
+    background: #0193bc;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 10px;
+    margin: 15px 0;
+    width: 60%;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.5);
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    color: #667c99;
+}
+/* --- MOBILE & TABLET OPTIMIZATION --- */
+
+@media (max-width: 992px) {
+    .footer-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-footer {
+        padding: 30px 20px 15px; /* Mobile lo padding thaggimpu */
+    }
+
+    .footer-top {
+        align-items: flex-start; /* Logo & Social left ki align avthayi */
+        gap: 15px;
+    }
+
+    .footer-grid { 
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 25px; 
+        text-align: left; /* Prathi element left side untundhi */
+    }
+
+    .footer-col h3 {
+        font-size: 15px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid rgba(255,255,255,0.1); /* Heading kinda chinna line */
+        display: inline-block;
+        padding-right: 20px;
+    }
+
+    .hours-list p { 
+        justify-content: flex-start; /* Time & Day daggara untayi */
+        gap: 15px; 
+        font-size: 13px;
+    }
+
+    .social-links { 
+        justify-content: flex-start; 
+    }
+
+    .footer-bottom { 
+        flex-direction: column; 
+        align-items: flex-start; /* Copyright text left align */
+        gap: 8px; 
+        text-align: left; 
+    }
+
+    .footer-btn {
+        width: auto; /* Full width kakunda content batti button */
+        padding: 10px 25px;
+        display: inline-block;
+    }
+    
+    .mini-map {
+        height: 120px; /* Mobile lo map visibility kosam */
+        margin-top: 10px;
+    }
+}
+.footer-credit {
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+}
+
+.footer-credit a {
+  color: #ff7a00;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-credit a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background: #ff7a00;
+  transition: width 0.3s ease;
+}
+
+.footer-credit a:hover::after {
+  width: 100%;
 }

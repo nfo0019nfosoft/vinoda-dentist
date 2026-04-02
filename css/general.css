@@ -286,6 +286,7 @@
 .service-header h1 {
   font-size: 36px;
   font-weight: 700;
+  text-transform: uppercase;
   margin-bottom: 10px;
   letter-spacing: 1px;
   text-transform: capitalize;
@@ -343,6 +344,7 @@
 .about-service h2 {
   color: #0193bc; /* Deep blue color from your theme */
   font-size: 32px;
+  text-transform: uppercase;
   margin-bottom: 20px;
   font-weight: 700;
 }
@@ -403,6 +405,7 @@
     text-align: center;
     color: #0193bc;
     font-size: 32px;
+    text-transform: uppercase;
     margin-bottom: 40px;
     font-weight: 700;
 }
