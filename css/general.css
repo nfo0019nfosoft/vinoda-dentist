@@ -262,197 +262,60 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-.appointment-section {
-    padding: 50px 20px;
-     background-color:#005f7a;
+/* SERVICE HEADER SECTION */
+.service-header {
+  background-color: #005f7a; /* Nee selection color */
+  padding: 60px 0;
+  text-align: center;
+  color: #ffffff;
 }
 
-.app-container {
-    max-width: 1200px;
-    margin: 0 auto;
+.service-header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.appointment-wrapper {
-    display: flex;
-    gap: 60px;
-    align-items: flex-start;
+.header-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-/* LEFT FORM BOX */
-.form-container {
-    background-color: #0193bc; /* Navy Blue Box */
-    padding: 45px;
-    border-radius: 10px;
-    color: white;
-    flex: 1;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+.service-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
 }
 
-.form-container h2 {
-    font-size: 32px;
-    margin: 0 0 10px 0;
-    text-align: center;
+.service-header .sub-text {
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.95;
+  letter-spacing: 0.5px;
 }
 
-.form-container p {
-    text-align: center;
-    font-size: 14px;
-    margin-bottom: 30px;
-    color: #cbd5e0;
-}
-
-.highlight-orange {
-    color: #ff6600;
-    font-weight: bold;
-}
-
-.field-group {
-    margin-bottom: 20px;
-}
-
-.field-group label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.field-group input, 
-.field-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
-    box-sizing: border-box;
-}
-
-.submit-btn {
-    background-color: #0193bc;
-    color: white;
-    border: none;
-    padding: 15px;
-    width: 100%;
-    border-radius: 50px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease;
-    margin-top: 10px;
-}
-
-.submit-btn:hover {
-    background-color: #ff6600;
-}
-
-/* RIGHT INFO CONTAINER (2 PER ROW) */
-.info-container {
-    flex: 1.2;
-    color: white;
-}
-
-.title-white {
-    font-size: 34px;
-    margin-bottom: 40px;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* This makes 2 per row */
-    gap: 40px 30px;
-}
-
-.info-item {
-    display: flex;
-    gap: 15px;
-}
-.info-item i {
-    color:#ff6600;
-    font-size: 25px;
-}
-
-.icon-box {
-    font-size: 26px;
-    color: #0d1b3e; /* Dark Navy icon color */
-    margin-top: 5px;
-}
-
-.info-details h4 {
-    margin: 0 0 8px 0;
-    color: white;
-    font-size: 20px;
-}
-
-.info-details p {
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #f1f5f9;
-}
-
-.action-link {
-    color: white;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: bold;
-    margin-top: 8px;
-    display: inline-block;
-}
-
-.action-link:hover {
-    text-decoration: underline;
-}
-
-/* Business Hours grid inside the grid */
-.hours-table {
-    margin-top: 10px;
-    width: 100%;
-}
-
-.h-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    color: white;
-    padding: 4px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.orange-text {
-    color: #ff6600;
-    font-weight: bold;
-}
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
-    .appointment-wrapper {
-        flex-direction: column;
-    }
-    .info-grid {
-        grid-template-columns: 1fr 1fr; /* Keep 2 per row for tablets */
-    }
-}
-
-@media (max-width: 600px) {
-    .info-grid {
-        grid-template-columns: 1fr; /* 1 per row for small mobiles */
-    }
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .service-header {
+    padding: 40px 15px;
+  }
+  
+  .service-header h1 {
+    font-size: 28px;
+  }
+  
+  .service-header .sub-text {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  .header-icon {
+    font-size: 30px;
+  }
 }
 
 
@@ -466,87 +329,183 @@
 
 
 
-
-
-
-.map-section {
-    padding: 80px 0;
-    background-color: #f4f8fb;
-    text-align: center;
+.about-service {
+  background-color: #e0f2f4; /* Light background shade */
+  padding: 40px 0;
+  text-align: center;
 }
 
-.map-header h2 {
-    color: #0193bc;
-    font-size: 32px;
-    margin-bottom: 10px;
-    font-weight: 700;
+.about-service .container {
+  max-width: 900px; /* Text baga spread avvakunda limited width */
+  margin: auto;
 }
 
-.map-header p {
-    color: #666;
-    margin-bottom: 30px;
+.about-service h2 {
+  color: #0193bc; /* Deep blue color from your theme */
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
-/* Map Styling */
-.map-box {
-    width: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-    border: 5px solid #fff; /* White border looks premium */
-    margin-bottom: 20px;
-}
-
-.map-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.info-card {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #333;
-    font-weight: 500;
-    font-size: 17px;
-}
-
-.info-card i {
-    color: #0193bc;
-    font-size: 24px;
-}
-
-/* Directions Button */
-.directions-btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #ff6600; /* Orange Theme */
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: 0.3s ease;
-    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
-}
-
-.directions-btn:hover {
-    background-color: #0193bc;
-    transform: translateY(-3px);
+.about-service p {
+  color: #444;
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 400;
 }
 
 /* MOBILE VIEW */
 @media (max-width: 768px) {
-    .map-section {
-        padding: 50px 15px;
+  .about-service {
+    padding: 40px 20px;
+  }
+  
+  .about-service h2 {
+    font-size: 26px;
+  }
+  
+  .about-service p {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sub-services-section {
+    background-color: #e0f2f4;
+    padding: 60px 0;
+}
+
+.main-title {
+    text-align: center;
+    color: #0193bc;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.sub-service-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.sub-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Reverse class for alternating layout */
+.sub-service-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-info {
+    flex: 1;
+    padding: 40px;
+}
+
+.service-info h3 {
+    color: #0193bc;
+    font-size: 24px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-info p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-points {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.service-points li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 500;
+}
+
+.service-points li i {
+    color: #ff6600; /* Orange color for bullet icons */
+    font-size: 18px;
+}
+
+.service-image {
+    flex: 1;
+    height: 350px;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.know-more-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.know-more-btn:hover {
+    background: #0193bc;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+    .sub-service-card, .sub-service-card.reverse {
+        flex-direction: column; /* Mobile lo image paina matter kinda vasthundi */
     }
     
-    .map-box iframe {
-        height: 300px;
+    .service-image {
+        width: 100%;
+        height: 250px;
+        order: -1; /* Image always on top in mobile */
     }
     
-    .info-card {
-        font-size: 15px;
+    .service-info {
+        padding: 25px;
     }
 }

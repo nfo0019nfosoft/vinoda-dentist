@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<title>Vinoda Dental Hospital</title>
+
+<link rel="icon" href="images/logo.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/general.css">
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container topbar-content">
+
+    <!-- LEFT -->
+    <div class="left">
+      <a href="index.html">
+        <img src="images/logo.png" class="logo">
+      </a>
+    </div>
+
+    <!-- CENTER -->
+    <div class="center-info">
+      <div class="info-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Vinoda Hospital, Hyderabad</span>
+      </div>
+
+      <div class="info-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+91 98765 43210</span>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+      <a href="contact.html" class="btn">Schedule Appointment</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container nav-content">
+
+    <!-- HAMBURGER -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MENU -->
+    <ul class="nav-links" id="nav-links">
+
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+
+      <li class="dropdown">
+        <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+
+        <ul class="dropdown-menu">
+          <li><a href="general-dentistry.html">General Dentistry</a></li>
+          <li><a href="cosmetic-dentistry.html">Cosmetic Dentistry</a></li>
+          <li><a href="braces.html">Braces</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+  </div>
+</nav>
+
+<script>
+const toggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+// MOBILE MENU
+toggle.onclick = () => {
+  navLinks.classList.toggle('active');
+};
+
+// SERVICES CLICK (ONLY TO OPEN, NOT CLOSE ON CHILD CLICK)
+document.querySelectorAll('.dropdown').forEach(drop => {
+  
+  const btn = drop.querySelector('a');
+  const menu = drop.querySelector('.dropdown-menu');
+
+  btn.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      e.stopPropagation();
+      menu.classList.toggle('show');
+    }
+  });
+
+  // 🔥 IMPORTANT FIX: stop closing when clicking inside submenu
+  menu.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+
+});
+
+const toggle = document.getElementById('menu-toggle');
+
+
+// Open/Close Mobile Menu
+toggle.onclick = () => {
+  navLinks.classList.toggle('active');
+};
+
+// Handle Dropdown Click on Mobile
+document.querySelectorAll('.dropdown > a').forEach(dropdownBtn => {
+  dropdownBtn.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault(); // Stop page from jumping
+      const menu = this.nextElementSibling;
+      menu.classList.toggle('show');
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="service-header">
+  <div class="container">
+    <div class="header-icon">
+      <i class="fa-solid fa-tooth"></i>
+    </div>
+    
+    <h1>General Dentistry</h1>
+    
+    <div class="sub-text">
+      Comprehensive Oral Exams • Professional Cleaning • Fillings • Preventive Care
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="about-service">
+  <div class="container">
+    <h2>About General Dentistry</h2>
+    <p>
+      Our General Dentistry department provides comprehensive diagnostic, preventive, and restorative dental care for patients of all ages. From routine oral check-ups and professional cleaning to advanced cavity fillings and gum health management, we ensure painless, ethical, and modern treatment for every smile.
+    </p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="sub-services-section">
+    <div class="container">
+        <h2 class="main-title">Our General Dentistry Sub-Services</h2>
+
+        <div class="sub-service-card" data-aos="fade-up">
+            <div class="service-info">
+                <h3><i class="fa-solid fa-teeth"></i> Dental Braces</h3>
+                <p>Straighten teeth effectively with customised orthodontic braces for all ages. We ensure perfect alignment for a confident smile.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Metal & Ceramic Braces</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Invisible Aligners</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Teen & Adult Orthodontics</li>
+                </ul>
+                <a href="#" class="know-more-btn">Know More</a>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Braces">
+            </div>
+        </div>
+
+        <div class="sub-service-card reverse" data-aos="fade-up">
+            <div class="service-info">
+                <h3><i class="fa-solid fa-plug"></i> Dental Implants</h3>
+                <p>Restore missing teeth with durable, natural-looking dental implants for a permanent fix and better chewing ability.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Single Tooth Replacement</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Full Mouth Implants</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Bone Grafting Services</li>
+                </ul>
+                <a href="#" class="know-more-btn">Know More</a>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Implants">
+            </div>
+        </div>
+
+        <div class="sub-service-card" data-aos="fade-up">
+            <div class="service-info">
+                <h3><i class="fa-solid fa-tooth"></i> Teeth Whitening</h3>
+                <p>Enhance your smile with professional cosmetic treatments for brighter, whiter teeth in just one session.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Instant Laser Whitening</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Stain Removal</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Take-home Kits</li>
+                </ul>
+                <a href="#" class="know-more-btn">Know More</a>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/6612711/pexels-photo-6612711.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Whitening">
+            </div>
+        </div>
+
+    </div>
+</section>

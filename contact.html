@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<title>Vinoda Dental Hospital</title>
+
+<link rel="icon" href="images/logo.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container topbar-content">
+
+    <!-- LEFT -->
+    <div class="left">
+      <a href="index.html">
+        <img src="images/logo.png" class="logo">
+      </a>
+    </div>
+
+    <!-- CENTER -->
+    <div class="center-info">
+      <div class="info-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Vinoda Hospital, Hyderabad</span>
+      </div>
+
+      <div class="info-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+91 98765 43210</span>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+      <a href="contact.html" class="btn">Schedule Appointment</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container nav-content">
+
+    <!-- HAMBURGER -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MENU -->
+    <ul class="nav-links" id="nav-links">
+
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+
+      <li class="dropdown">
+        <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+
+        <ul class="dropdown-menu">
+          <li><a href="general-dentistry.html">General Dentistry</a></li>
+          <li><a href="cosmetic-dentistry.html">Cosmetic Dentistry</a></li>
+          <li><a href="braces.html">Braces</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+  </div>
+</nav>
+
+<script>
+const toggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+// MOBILE MENU
+toggle.onclick = () => {
+  navLinks.classList.toggle('active');
+};
+
+// SERVICES CLICK (ONLY TO OPEN, NOT CLOSE ON CHILD CLICK)
+document.querySelectorAll('.dropdown').forEach(drop => {
+  
+  const btn = drop.querySelector('a');
+  const menu = drop.querySelector('.dropdown-menu');
+
+  btn.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      e.stopPropagation();
+      menu.classList.toggle('show');
+    }
+  });
+
+  // 🔥 IMPORTANT FIX: stop closing when clicking inside submenu
+  menu.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+
+});
+
+const toggle = document.getElementById('menu-toggle');
+
+
+// Open/Close Mobile Menu
+toggle.onclick = () => {
+  navLinks.classList.toggle('active');
+};
+
+// Handle Dropdown Click on Mobile
+document.querySelectorAll('.dropdown > a').forEach(dropdownBtn => {
+  dropdownBtn.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault(); // Stop page from jumping
+      const menu = this.nextElementSibling;
+      menu.classList.toggle('show');
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="appointment-section">
+    <div class="container">
+        <div class="appointment-wrapper">
+            
+            <div class="form-container">
+                <h2>Request an Appointment</h2>
+                <p>Call us at <span class="highlight-orange">+91 98765 43210</span> or complete the form.</p>
+                
+                <form id="appointmentForm">
+                    <div class="field-group">
+                        <label>Full Name:</label>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label>Phone:</label>
+                        <input type="tel" placeholder="Enter phone number" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label>Email:</label>
+                        <input type="email" placeholder="Enter email address" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label>Message:</label>
+                        <textarea rows="4" placeholder="Your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Send Message <i class="fa fa-rocket"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="info-container">
+                <h2 class="title-white">Contact Information</h2>
+                
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fa fa-phone icon-box"></i>
+                        <div class="info-details">
+                            <h4>Phone</h4>
+                            <p>+91 98765 43210</p>
+                            <a href="tel:+919876543210" class="action-link">Click to Call [+]</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa fa-envelope icon-box"></i>
+                        <div class="info-details">
+                            <h4>Email</h4>
+                            <p>info@vinodahospital.com</p>
+                            <a href="mailto:info@vinodahospital.com" class="action-link">Click to Email [+]</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                      <i class="fa-solid fa-location-dot icon-box"></i>
+                        <div class="info-details">
+                            <h4>Address</h4>
+                            <p>Vinoda  Dental Hopsital ,<br>hyderabad</p>
+                            <a href="https://maps.google.com" target="_blank" class="action-link">Click to Navigate [+]</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa fa-clock-o icon-box"></i>
+                        <div class="info-details">
+                            <h4>Business Hours</h4>
+                            <div class="hours-table">
+                                <div class="h-row"><span>Mon</span> <span>11am - 7pm</span></div>
+                                <div class="h-row"><span>Tue, Thu</span> <span>1pm - 5pm</span></div>
+                                <div class="h-row"><span>Wed</span> <span>9am - 5pm</span></div>
+                                <div class="h-row"><span>Fri</span> <span>7am - 1pm</span></div>
+                                <div class="h-row"><span>Sat-Sun</span> <span class="orange-text">Closed</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section class="map-section">
+    <div class="container">
+        <div class="map-header">
+            <h2>Our Location</h2>
+            <p>Visit us for the best dental care in Hanumakonda.
+            </p>
+        </div>
+
+        <div class="map-box">
+           <iframe
+  src="https://www.google.com/maps?q=Vinoda+Dental+Hospital+Hanumakonda&z=17&output=embed"
+  width="100%"
+  height="400"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy">
+</iframe>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<title>Vinoda Dental Hospital</title>
+
+<link rel="icon" href="images/logo.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container topbar-content">
+
+    <!-- LEFT -->
+    <div class="left">
+      <a href="index.html">
+        <img src="images/logo.png" class="logo">
+      </a>
+    </div>
+
+    <!-- CENTER -->
+    <div class="center-info">
+      <div class="info-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Vinoda Hospital, Hyderabad</span>
+      </div>
+
+      <div class="info-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+91 98765 43210</span>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+      <a href="contact.html" class="btn">Schedule Appointment</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container nav-content">
+
+    <!-- HAMBURGER -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MENU -->
+    <ul class="nav-links" id="nav-links">
+
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+
+      <li class="dropdown">
+        <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+
+        <ul class="dropdown-menu">
+          <li><a href="general-dentistry.html">General Dentistry</a></li>
+          <li><a href="cosmetic-dentistry.html">Cosmetic Dentistry</a></li>
+          <li><a href="braces.html">Braces</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+  </div>
+</nav>
+
+<script>
+const toggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+// MOBILE MENU
+toggle.onclick = () => {
+  navLinks.classList.toggle('active');
+};
+
+// SERVICES CLICK (ONLY TO OPEN, NOT CLOSE ON CHILD CLICK)
+document.querySelectorAll('.dropdown').forEach(drop => {
+  
+  const btn = drop.querySelector('a');
+  const menu = drop.querySelector('.dropdown-menu');
+
+  btn.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      e.stopPropagation();
+      menu.classList.toggle('show');
+    }
+  });
+
+  // 🔥 IMPORTANT FIX: stop closing when clicking inside submenu
+  menu.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+
+});
+
+const toggle = document.getElementById('menu-toggle');
+
+
+// Open/Close Mobile Menu
+toggle.onclick = () => {
+  navLinks.classList.toggle('active');
+};
+
+// Handle Dropdown Click on Mobile
+document.querySelectorAll('.dropdown > a').forEach(dropdownBtn => {
+  dropdownBtn.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault(); // Stop page from jumping
+      const menu = this.nextElementSibling;
+      menu.classList.toggle('show');
+    }
+  });
+});
+</script>
+

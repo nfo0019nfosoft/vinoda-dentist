@@ -1,0 +1,842 @@
+/* GENERAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* TOPBAR */
+.topbar {
+  background: #f8f9fa;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.topbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+  display: block;
+}
+
+.center-info {
+  display: flex;
+  gap: 25px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #444;
+}
+
+.info-item i {
+  color: #0193bc;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #0193bc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: center; /* Centers links on desktop */
+  align-items: center;
+  padding: 0; /* Let links handle padding for bigger click area */
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.nav-links > li > a {
+  display: block;
+  padding: 20px 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links > li > a:hover,
+.nav-links > li > a.active {
+ 
+  color: #ff6600;
+}
+
+/* DROPDOWN LOGIC (Desktop) */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Fixes the gap issue */
+  left: 0;
+  background: white;
+  min-width: 200px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+/* This pseudo-element bridges any tiny gap so menu doesn't close */
+.dropdown::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+
+.dropdown-menu li a {
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  transition: 0.2s;
+}
+
+.dropdown-menu li a:hover {
+  background: #f1f1f1;
+  color: #0193bc;
+  padding-left: 25px; /* Nice sliding effect */
+}
+
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* MOBILE STYLES */
+.menu-toggle {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 15px;
+}
+
+@media (max-width: 768px) {
+  .topbar-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .center-info {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .right {
+    margin-top: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #007da1;
+    flex-direction: column;
+    display: none;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links > li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav-links > li > a {
+    padding: 15px;
+    text-align: center;
+  }
+
+  /* Mobile Dropdown */
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    background: #0193bc;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .dropdown-menu.show {
+    display: flex;
+  }
+
+  .dropdown-menu li a {
+    color: white;
+    text-align: center;
+    background: rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+}
+/* RIGHT SECTION (Button Wrapper) */
+.right {
+  display: flex;
+  align-items: center;
+}
+
+/* BUTTON STYLES */
+.btn {
+  background: #ff6600; /* Orange color stand out avvadaniki */
+  color: white;
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  white-space: nowrap; /* Text okka line lone untundi */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+  background: #0193bc;
+  transform: translateY(-2px); /* Hover chesinappudu koncham paiki legustundi */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* MOBILE RESPONSIVENESS FOR BUTTON */
+@media (max-width: 768px) {
+  .right {
+    width: 100%;
+    justify-content: center; /* Mobile lo button center ki vasthundi */
+    margin-top: 10px;
+  }
+  
+  .btn {
+    width: 80%; /* Mobile lo button koncham peddaga kanipisthundi */
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about-clean {
+    padding: 50px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.about-flex-container {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    gap: 70px;
+}
+
+/* LEFT IMAGE STYLING */
+.about-left-img {
+    flex: 1;
+}
+
+.image-frame {
+    position: relative;
+    border-radius: 25px;
+    overflow: visible; /* To allow the tag to pop out */
+}
+
+.image-frame img {
+    width: 100%;
+    height: 750px; /* Big vertical image */
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 20px 20px 0px #0193bc15; /* Modern offset shadow */
+}
+
+.experience-tag {
+    position: absolute;
+    bottom: 40px;
+    left: -30px;
+    background: #ff6600;
+    color: white;
+    padding: 25px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(255, 102, 0, 0.3);
+}
+
+.experience-tag h3 { font-size: 38px; font-weight: 800; line-height: 1; }
+.experience-tag p { font-size: 14px; font-weight: 600; margin-top: 5px; }
+
+/* RIGHT CONTENT STYLING */
+.about-right-text {
+    flex: 1.2;
+}
+
+.top-label {
+    color: #ff6600;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.main-title {
+    font-size: 44px;
+    color: #222;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.blue-text { color: #0193bc; }
+
+.rich-text p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* FEATURES */
+.key-features-list {
+    margin: 35px 0;
+}
+
+.feature-line {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.feature-line i {
+    color: #0193bc;
+    font-size: 20px;
+    width: 25px;
+}
+
+/* CALL TO ACTION */
+.action-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.btn-main {
+    background: #ff6600;
+    color: white;
+    padding: 16px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(1, 147, 188, 0.3);
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    background: #0193bc;
+    transform: translateY(-3px);
+}
+
+.support-contact span {
+    display: block;
+    font-size: 13px;
+    color: #888;
+}
+
+.support-contact a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.support-contact a:hover { color: #0193bc; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 992px) {
+    .about-flex-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .image-frame img {
+        height: 400px;
+    }
+    
+    .experience-tag {
+        left: 20px;
+        bottom: -20px;
+    }
+    
+    .main-title {
+        font-size: 32px;
+    }
+    
+    .action-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MISSION & VISION STYLES */
+.mission-vision-section {
+    padding: 50px 0;
+    background-color: #f8fbfd;
+    overflow: hidden;
+}
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.mv-card {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    border-top: 6px solid transparent;
+}
+
+/* Color Varieties */
+.mv-card.mission { border-color: #ff6600; }
+.mv-card.vision { border-color: #0193bc; }
+
+.mv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+
+.mv-icon-box {
+    width: 70px;
+    height: 70px;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 30px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.mission .mv-icon-box { color: #ff6600; background: rgba(255, 102, 0, 0.1); }
+.vision .mv-icon-box { color: #0193bc; background: rgba(1, 147, 188, 0.1); }
+
+.mv-tag {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.mv-content h2 {
+    font-size: 32px;
+    color: #ff6600;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.mv-content h3 {
+    font-size: 32px;
+    color: #0193bc;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.mv-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.mv-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mv-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.mission .mv-list li i { color: #ff6600; }
+.vision .mv-list li i { color: #0193bc; }
+
+/* MOBILE VIEW */
+@media (max-width: 992px) {
+    .mv-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .mv-card {
+        padding: 30px;
+    }
+    
+    .mv-content h2 {
+        font-size: 26px;
+    }
+    
+    .mv-content h3 {
+        font-size: 26px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hospital-highlights {
+    padding: 50px 0;
+    background: linear-gradient(135deg, #0193bc 0%, #006b8a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.highlight-header .badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.highlight-header h2 {
+    font-size: 42px;
+    margin-top: 15px;
+    font-weight: 800;
+}
+
+.orange-text { color: #ff6600; }
+
+/* HIGHLIGHT CARDS */
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.h-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px 30px;
+    border-radius: 25px;
+    color: white;
+    position: relative;
+    transition: 0.4s ease;
+    z-index: 1;
+}
+
+.h-card:hover {
+    background: white;
+    transform: translateY(-15px);
+}
+
+.h-card:hover h3, .h-card:hover p {
+    color: #333;
+}
+
+.h-icon {
+    width: 65px;
+    height: 65px;
+    background: #ff6600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(255, 102, 0, 0.3);
+    transition: 0.4s;
+}
+
+.h-card:hover .h-icon {
+    transform: rotateY(360deg);
+}
+
+.h-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.h-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.h-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.1);
+    transition: 0.4s;
+}
+
+.h-card:hover .h-number {
+    color: rgba(0, 0, 0, 0.05);
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+    .hospital-highlights { padding: 60px 15px; }
+    .highlight-header h2 { font-size: 32px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.counter-highlights {
+    padding: 80px 0;
+    background-color: #f4f8fb;
+}
+
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.counter-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    border-bottom: 5px solid #0193bc; /* Subtle blue bottom border */
+    position: relative;
+    overflow: hidden;
+}
+
+/* HOVER EFFECT */
+.counter-card:hover {
+    background: #0193bc; /* Changes background to blue on hover */
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(1, 147, 188, 0.3);
+}
+
+.card-icon {
+    font-size: 45px;
+    color: #ff6600; /* Orange icons */
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+
+.counter-card:hover .card-icon {
+    color: #ffffff; /* Icon turns white on hover */
+    transform: scale(1.1);
+}
+
+.counter-number {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0193bc;
+    margin-bottom: 10px;
+    transition: 0.4s;
+}
+
+.counter-card:hover .counter-number {
+    color: #ffffff;
+}
+
+.counter-card h3 {
+    font-size: 20px;
+    color:#005f7a;
+    margin-bottom: 15px;
+    transition: 0.4s;
+}
+
+.counter-card:hover h3 {
+    color: #ffffff;
+}
+
+.counter-card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+    transition: 0.4s;
+}
+
+.counter-card:hover p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+    .counter-highlights {
+        padding: 50px 15px;
+    }
+}
+
+
+.highlights-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.h-tag {
+    background: rgba(255, 102, 0, 0.1);
+    color: #ff6600;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.h-title {
+    font-size: 40px;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.blue-text {
+    color: #0193bc;
+}
+
+.h-desc {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+    .h-title {
+        font-size: 30px;
+    }
+    .h-desc {
+        font-size: 14px;
+    }
+}
