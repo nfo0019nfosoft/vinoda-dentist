@@ -1186,7 +1186,7 @@ body {
  
 .appointment-section {
     padding: 50px 20px;
-     background-color: #0193bc;
+     background-color: #66C0D6;
 }
 
 .app-container {
@@ -1374,215 +1374,214 @@ body {
 
 
 
-
-
-
-
+/* --- MAIN FOOTER --- */
 .main-footer {
-    background-color:#005f7a;
+    background-color: #005f7a; /* Mee current color */
     color: #ffffff;
-    padding: 40px 0 20px; /* Reduced padding */
+    padding: 50px 0 0; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden; /* Side scrolling rakunda */
 }
 
+/* Container Alignment */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Top Section: Logo & Social */
 .footer-top {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
-.footer-logo img {
-    height: 60px; /* Adjust based on your logo */
+.footer-logo img { 
+    height: 70px; 
     width: auto;
 }
 
 .social-links {
     display: flex;
-    gap: 12px;
+    gap: 10px;
 }
 
 .social-links a {
-    width: 35px;
-    height: 35px;
-    background: rgba(255,255,255,0.1);
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.1);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     text-decoration: none;
-    transition: 0.3s;
-    font-size: 14px;
+    transition: 0.3s ease;
 }
 
 .social-links a:hover {
-    background: #0193bc;
-    transform: translateY(-2px);
+    background: #ff6600;
+    transform: translateY(-3px);
 }
 
+/* Horizontal Line */
 .footer-divider {
     border: 0;
-    border-top: 1px solid rgba(255,255,255,0.5);
-    margin-bottom: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 35px;
 }
 
+/* Grid Layout */
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    margin-bottom: 30px;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
-/* CAPITALIZED HEADINGS */
 .footer-col h3 {
-    font-size: 16px;
-    margin-bottom: 15px;
+    font-size: 15px;
     color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
     font-weight: 700;
-    text-transform: uppercase; /* Capital Letters */
     letter-spacing: 1px;
 }
 
-.footer-col ul { list-style: none; padding: 0; margin: 0; }
-.footer-col ul li { margin-bottom: 8px; }
+/* List Items - No Dots */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col p, 
 .footer-col ul li a {
-    color: #b0b8c1;
-    text-decoration: none;
+    color: #ffffff !important;
     font-size: 14px;
+    line-height: 1.8;
+    text-decoration: none;
     transition: 0.3s;
 }
 
-.footer-col ul li a:hover { color: #0193bc; }
+.footer-col ul li a:hover {
+    color: #ff6600 !important;
+    padding-left: 5px;
+}
 
+/* Icons Style */
+.footer-col i { 
+    color: #ff6600 !important; /* Orange Icons */
+    margin-right: 10px; 
+    width: 20px;
+    text-align: center;
+}
+
+/* Business Hours - Tight & No Lines */
 .hours-list p {
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
-    text-decoration: none;
-    color: #b0b8c1;
-    margin-bottom: 6px;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    padding-bottom: 4px;
+    margin-bottom: 6px !important;
+    border: none !important;
+    padding: 0 !important;
 }
 
-.orange-text { color: #ff6600; font-weight: bold; }
-
-.contact-info p {
-    font-size: 14px;
-    color: #b0b8c1;
-    margin-bottom: 4px;
-    line-height: 1.4;
+.orange-text { 
+    color: #ff6600 !important; 
+    font-weight: bold; 
 }
 
-.footer-btn {
-    display: inline-block;
-    background: #0193bc;
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 10px;
-    margin: 15px 0;
-    width: 60%;
-}
-
+/* --- FULL WIDTH GLASS BOTTOM BAR --- */
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.5);
-    padding-top: 15px;
-    display: flex;
-    justify-content: center;
-    font-size: 13px;
-    color: #667c99;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
 }
-/* --- MOBILE & TABLET OPTIMIZATION --- */
 
-@media (max-width: 992px) {
-    .footer-grid { 
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 20px;
-    }
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+    color: #ffffff !important;
+  
+    opacity: 0.8;
+}
+
+/* CONTACT BUTTON - Rounded Corners */
+.footer-book-btn {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #ffffff !important;
+    padding: 12px 25px;
+    margin-top: 20px;
+    
+    /* BORDER RADIUS IKKADA UNDI */
+    border-radius: 30px; /* Purti ga rounded (Capsule shape) kosam */
+    /* Leda koncheme curve kavali ante 8px pettochu */
+    
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 2px solid #ff6600;
+    text-align: center;
+}
+
+.footer-book-btn:hover {
+    background-color: transparent;
+    color: #ff6600 !important;
+    border-radius: 8px; /* Hover chesinappudu shape maruthundi - Stylish ga untundi */
+    transform: translateY(-3px);
 }
 
 @media (max-width: 600px) {
-    .main-footer {
-        padding: 30px 20px 15px; /* Mobile lo padding thaggimpu */
+    .footer-top {
+        align-items: flex-start; /* Mobile left align logo & social */
     }
 
-    .footer-top {
-        align-items: flex-start; /* Logo & Social left ki align avthayi */
-        gap: 15px;
+    .social-links {
+        justify-content: flex-start;
     }
 
     .footer-grid { 
-        grid-template-columns: 1fr; /* Single column layout */
-        gap: 25px; 
-        text-align: left; /* Prathi element left side untundhi */
+        grid-template-columns: 1fr; 
+        text-align: left; /* All text left align */
+        gap: 30px;
     }
 
     .footer-col h3 {
-        font-size: 15px;
-        margin-bottom: 12px;
-        border-bottom: 1px solid rgba(255,255,255,0.1); /* Heading kinda chinna line */
+        margin-bottom: 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
         display: inline-block;
         padding-right: 20px;
     }
 
     .hours-list p { 
-        justify-content: flex-start; /* Time & Day daggara untayi */
-        gap: 15px; 
-        font-size: 13px;
-    }
-
-    .social-links { 
         justify-content: flex-start; 
+        gap: 40px; /* Day and Time gap */
     }
 
-    .footer-bottom { 
-        flex-direction: column; 
-        align-items: flex-start; /* Copyright text left align */
-        gap: 8px; 
-        text-align: left; 
+    .footer-book-btn {
+        display: block; /* Full width button on mobile */
+        width: 100%;
+        border-radius: 8px; /* Soft square on mobile */
+        padding: 15px 0;
     }
 
-    .footer-btn {
-        width: auto; /* Full width kakunda content batti button */
-        padding: 10px 25px;
-        display: inline-block;
+    .footer-bottom {
+        padding: 15px 10px;
+        text-align: left; /* Bottom text left align */
     }
-    
-    .mini-map {
-        height: 120px; /* Mobile lo map visibility kosam */
-        margin-top: 10px;
-    }
-}
-.footer-credit {
-  text-align: center;
-  color: #888;
-  font-size: 13px;
-}
-
-.footer-credit a {
-  color: #ff7a00;
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-}
-
-.footer-credit a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  left: 0;
-  bottom: -2px;
-  background: #ff7a00;
-  transition: width 0.3s ease;
-}
-
-.footer-credit a:hover::after {
-  width: 100%;
 }
