@@ -1186,7 +1186,7 @@ body {
  
 .appointment-section {
     padding: 50px 20px;
-     background-color: #66C0D6;
+     background-color: #0193bc;
 }
 
 .app-container {
@@ -1545,43 +1545,76 @@ body {
     border-radius: 8px; /* Hover chesinappudu shape maruthundi - Stylish ga untundi */
     transform: translateY(-3px);
 }
+.contact-info p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
 
+.contact-info i {
+    margin-top: 5px; /* icon slightly down */
+    flex-shrink: 0;
+}
 @media (max-width: 600px) {
+
+    /* Top section left align */
     .footer-top {
-        align-items: flex-start; /* Mobile left align logo & social */
+        align-items: flex-start;
+        text-align: left;
     }
 
     .social-links {
         justify-content: flex-start;
     }
 
+    /* Grid → single column + left aligned */
     .footer-grid { 
         grid-template-columns: 1fr; 
-        text-align: left; /* All text left align */
-        gap: 30px;
+        text-align: left;
+        gap: 25px;
+    }
+
+    .footer-col {
+        text-align: left;
     }
 
     .footer-col h3 {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
         border-bottom: 1px solid rgba(255,255,255,0.1);
         display: inline-block;
-        padding-right: 20px;
+        padding-right: 15px;
     }
 
+    /* Hours spacing fix */
     .hours-list p { 
         justify-content: flex-start; 
-        gap: 40px; /* Day and Time gap */
+        gap: 20px;
     }
 
+    /* 🔥 Button smaller + left aligned */
     .footer-book-btn {
-        display: block; /* Full width button on mobile */
-        width: 100%;
-        border-radius: 8px; /* Soft square on mobile */
-        padding: 15px 0;
+        display: inline-block;   /* remove full width */
+        width: auto;             /* shrink to content */
+        border-radius: 8px;
+        padding: 10px 18px;      /* smaller size */
+        font-size: 12px;
+        margin-top: 15px;
     }
 
+    /* 🔥 Bottom copyright centered */
     .footer-bottom {
         padding: 15px 10px;
-        text-align: left; /* Bottom text left align */
+        text-align: center;  /* center only this */
     }
+
+    .footer-bottom p {
+        text-align: center;
+        font-size: 12px;
+    }
+    .hours-list p {
+    display: grid;
+    grid-template-columns: 80px 1fr; /* fixed width for days */
+    margin-bottom: 6px !important;
+    align-items: center;
+}
 }
