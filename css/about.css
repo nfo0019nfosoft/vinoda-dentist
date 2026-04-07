@@ -132,9 +132,15 @@
 @media (min-width: 769px) {
   .dropdown:hover .dropdown-menu {
     display: flex;
+     flex-direction: column;
   }
 }
-
+@media (max-width: 768px) {
+  .dropdown-menu.show {
+    display: flex !important; /* ఇక్కడ !important యాడ్ చేయండి */
+    flex-direction: column;
+  }
+}
 /* MOBILE STYLES */
 .menu-toggle {
   display: none;
