@@ -333,7 +333,7 @@
 }
 
 .top-label {
-    color: #ff6600;
+    color: #0193bc;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -343,7 +343,7 @@
 
 .main-title {
     font-size: 44px;
-    color: #222;
+    color: #ff6600;
     line-height: 1.2;
     margin-bottom: 30px;
     font-weight: 800;
@@ -373,7 +373,7 @@
 }
 
 .feature-line i {
-    color: #0193bc;
+    color: #ff6600;
     font-size: 20px;
     width: 25px;
 }
@@ -602,7 +602,7 @@
 }
 
 .highlight-header .badge {
-    background: rgba(255, 255, 255, 0.2);
+    background: #ff6600;
     padding: 8px 20px;
     border-radius: 30px;
     font-size: 14px;
@@ -710,7 +710,7 @@
 
 
 .counter-highlights {
-    padding: 80px 0;
+    padding: 50px 0;
     background-color: #f4f8fb;
 }
 
@@ -727,14 +727,14 @@
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     transition: all 0.4s ease;
-    border-bottom: 5px solid #0193bc; /* Subtle blue bottom border */
+    border-bottom: 5px solid #ff6600; /* Subtle orange bottom border */
     position: relative;
     overflow: hidden;
 }
 
 /* HOVER EFFECT */
 .counter-card:hover {
-    background: #0193bc; /* Changes background to blue on hover */
+    background: #ff6600; /* Changes background to orange on hover */
     transform: translateY(-15px);
     box-shadow: 0 20px 40px rgba(1, 147, 188, 0.3);
 }
@@ -765,7 +765,7 @@
 
 .counter-card h3 {
     font-size: 20px;
-    color:#005f7a;
+    color:#ff6600;
     margin-bottom: 15px;
     transition: 0.4s;
 }
@@ -813,7 +813,7 @@
 
 .h-title {
     font-size: 40px;
-    color: #222;
+    color: #ff6600;
     text-transform: uppercase;
     font-weight: 800;
     margin-bottom: 20px;
