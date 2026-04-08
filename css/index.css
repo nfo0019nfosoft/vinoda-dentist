@@ -49,7 +49,7 @@
 
 /* NAVBAR */
 .navbar {
-  background: #0193bc;
+  background: #ff6600;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -82,7 +82,7 @@
 .nav-links > li > a:hover,
 .nav-links > li > a.active {
  
-  color: #ff6600;
+  color: #0193bc;
 }
 
 /* DROPDOWN LOGIC (Desktop) */
@@ -94,7 +94,7 @@
   position: absolute;
   top: 100%; /* Fixes the gap issue */
   left: 0;
-  background: white;
+  background: #ff6600;
   min-width: 200px;
   display: none;
   flex-direction: column;
@@ -116,7 +116,7 @@
 
 .dropdown-menu li a {
   padding: 12px 20px;
-  color: #333;
+  color: white;
   text-decoration: none;
   font-size: 15px;
   display: block;
@@ -440,7 +440,7 @@
     --primary-blue: #0193bc;
     --dark-blue: #005f7a;
     --primary-orange: #ff6600;
-    --dark-orange: #cc5200;
+    --dark-orange:#e65c00;
     --bg-dark: #0193bc; /* Professional Dark Blue Background for Card */
 }
 
@@ -553,9 +553,9 @@
 }
 
 /* Button Color Variations based on your 2 colors */
-.dark-blue-btn { background-color: var(--dark-blue); }
+.dark-blue-btn { background-color: #0193bc; }
 .orange-btn { background-color: var(--dark-orange); }
-.light-blue-btn { background-color: var(--dark-blue); }
+.light-blue-btn { background-color: #0193bc; }
 .dark-orange-btn { background-color: var(--dark-orange); }
 
 .tab-btn:hover {
@@ -1179,7 +1179,7 @@
 }
 
 .insurance-desc {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.8;
     max-width: 900px;
     margin: 0 auto 20px;
@@ -1199,7 +1199,7 @@
 }
 
 .insurance-marquee-wrapper marquee img {
-    height: 60px; /* Logo height adjust cheyandi */
+    height: 100px; /* Logo height adjust cheyandi */
     margin: 0 40px;
   
 }
@@ -1738,7 +1738,7 @@
  
 .appointment-section {
     padding: 50px 20px;
-     background-color: #0193bc;
+      background:  #e6f7fb;
 }
 
 .app-container {
@@ -1754,7 +1754,7 @@
 
 /* LEFT FORM BOX */
 .form-container {
-    background-color: #005f7a; /* Navy Blue Box */
+    background-color: #0193bc; /* Navy Blue Box */
     padding: 45px;
     border-radius: 10px;
     color: white;
@@ -1823,7 +1823,7 @@
 /* RIGHT INFO CONTAINER (2 PER ROW) */
 .info-container {
     flex: 1.2;
-    color: white;
+    color: #ff6600;
 }
 
 .title-white {
@@ -1854,7 +1854,7 @@
 
 .info-details h4 {
     margin: 0 0 8px 0;
-    color: white;
+    color: black;
     font-size: 20px;
 }
 
@@ -1862,11 +1862,11 @@
     margin: 0;
     font-size: 14px;
     line-height: 1.5;
-    color: #f1f5f9;
+    color: black;
 }
 
 .action-link {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 12px;
     font-weight: bold;
@@ -1888,7 +1888,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 12px;
-    color: white;
+    color: black;
     padding: 4px 0;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
