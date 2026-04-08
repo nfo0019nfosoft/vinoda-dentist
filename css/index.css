@@ -380,8 +380,8 @@
 }
 
 .hero-btn:hover {
-    background: transparent;
-    border-color: white;
+    background: #0193bc;
+    border-color: #0193bc;
     transform: translateY(-3px);
 }
 
@@ -662,7 +662,7 @@
     box-shadow: 0 4px 15px rgba(0, 146, 188, 0.3);
 }
 
-.view-all-btn:hover { background: var(--dark-blue); transform: translateY(-3px); }
+.view-all-btn:hover { background: #0193bc; transform: translateY(-3px); }
 
 /* 2. Right Images Overlap Effect */
 .services-right-overlap {
@@ -1803,7 +1803,7 @@
 }
 
 .submit-btn {
-    background-color: #0193bc;
+    background-color: #ff6600;
     color: white;
     border: none;
     padding: 15px;
@@ -1817,7 +1817,7 @@
 }
 
 .submit-btn:hover {
-    background-color: #ff6600;
+    background-color: #005f7a;
 }
 
 /* RIGHT INFO CONTAINER (2 PER ROW) */
