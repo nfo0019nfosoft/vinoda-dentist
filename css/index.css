@@ -49,7 +49,7 @@
 
 /* NAVBAR */
 .navbar {
-  background: #ff6600;
+  background: #0193bc;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -82,7 +82,7 @@
 .nav-links > li > a:hover,
 .nav-links > li > a.active {
  
-  color: #0193bc;
+  color: #ff6600;
 }
 
 /* DROPDOWN LOGIC (Desktop) */
@@ -1098,7 +1098,7 @@
 }
 
 .blue-footer {
-    background-color: #0193bc; /* Blue Box */
+    background-color: #20b1aa; /* Blue Box */
     padding: 45px 25px 30px 25px;
     color: white;
     flex-grow: 1;
