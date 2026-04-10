@@ -44,12 +44,12 @@
 }
 
 .info-item i {
-  color: #0193bc;
+  color: #20b1aa;
 }
 
 /* NAVBAR */
 .navbar {
-  background: #0193bc;
+  background: #20b1aa;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -125,7 +125,7 @@
 
 .dropdown-menu li a:hover {
   background: #f1f1f1;
-  color: #0193bc;
+  color: #20b1aa;
   padding-left: 25px; /* Nice sliding effect */
 }
 
@@ -200,7 +200,7 @@
   .dropdown-menu {
     position: static;
     width: 100%;
-    background: #0193bc;
+    background: #20b1aa;
     box-shadow: none;
     border-radius: 0;
     padding: 0;
@@ -239,7 +239,7 @@
 }
 
 .btn:hover {
-  background: #0193bc;
+  background: #20b1aa;
   transform: translateY(-2px); /* Hover chesinappudu koncham paiki legustundi */
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
@@ -315,7 +315,7 @@
     height: 750px; /* Big vertical image */
     object-fit: cover;
     border-radius: 25px;
-    box-shadow: 20px 20px 0px #0193bc15; /* Modern offset shadow */
+    box-shadow: 20px 20px 0px #20b1aa15; /* Modern offset shadow */
 }
 
 .experience-tag {
@@ -339,7 +339,7 @@
 }
 
 .top-label {
-    color: #0193bc;
+    color: #20b1aa;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -355,7 +355,7 @@
     font-weight: 800;
 }
 
-.blue-text { color: #0193bc; }
+.blue-text { color: #20b1aa; }
 
 .rich-text p {
     font-size: 17px;
@@ -404,7 +404,7 @@
 }
 
 .btn-main:hover {
-    background: #0193bc;
+    background: #20b1aa;
     transform: translateY(-3px);
 }
 
@@ -422,7 +422,7 @@
     transition: 0.3s;
 }
 
-.support-contact a:hover { color: #0193bc; }
+.support-contact a:hover { color: #20b1aa; }
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 992px) {
@@ -488,7 +488,7 @@
 
 /* Color Varieties */
 .mv-card.mission { border-color: #ff6600; }
-.mv-card.vision { border-color: #0193bc; }
+.mv-card.vision { border-color: #20b1aa; }
 
 .mv-card:hover {
     transform: translateY(-10px);
@@ -509,7 +509,7 @@
 }
 
 .mission .mv-icon-box { color: #ff6600; background: rgba(255, 102, 0, 0.1); }
-.vision .mv-icon-box { color: #0193bc; background: rgba(1, 147, 188, 0.1); }
+.vision .mv-icon-box { color: #20b1aa; background: rgba(32, 177, 170, 0.1); }
 
 .mv-tag {
     font-size: 13px;
@@ -530,7 +530,7 @@
 
 .mv-content h3 {
     font-size: 32px;
-    color: #0193bc;
+    color: #20b1aa;
     margin-bottom: 20px;
     font-weight: 800;
 }
@@ -558,7 +558,7 @@
 }
 
 .mission .mv-list li i { color: #ff6600; }
-.vision .mv-list li i { color: #0193bc; }
+.vision .mv-list li i { color: #20b1aa; }
 
 /* MOBILE VIEW */
 @media (max-width: 992px) {
@@ -596,7 +596,7 @@
 
 .hospital-highlights {
     padding: 50px 0;
-    background: linear-gradient(135deg, #0193bc 0%, #006b8a 100%);
+    background: linear-gradient(135deg, #20b1aa 0%, #006b8a 100%);
     position: relative;
     overflow: hidden;
 }
@@ -760,7 +760,7 @@
 .counter-number {
     font-size: 42px;
     font-weight: 800;
-    color: #0193bc;
+    color: #20b1aa;
     margin-bottom: 10px;
     transition: 0.4s;
 }
@@ -826,7 +826,7 @@
 }
 
 .blue-text {
-    color: #0193bc;
+    color: #20b1aa;
 }
 
 .h-desc {

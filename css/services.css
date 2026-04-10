@@ -44,12 +44,12 @@
 }
 
 .info-item i {
-  color: #0193bc;
+  color: #20b1aa;
 }
 
 /* NAVBAR */
 .navbar {
-  background: #0193bc;
+  background: #20b1aa;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -125,7 +125,7 @@
 
 .dropdown-menu li a:hover {
   background: #f1f1f1;
-  color: #0193bc;
+  color: #20b1aa;
   padding-left: 25px; /* Nice sliding effect */
 }
 
@@ -200,7 +200,7 @@
   .dropdown-menu {
     position: static;
     width: 100%;
-    background: #0193bc;
+    background: #20b1aa;
     box-shadow: none;
     border-radius: 0;
     padding: 0;
@@ -239,7 +239,7 @@
 }
 
 .btn:hover {
-  background: #0193bc;
+  background: #20b1aa;
   transform: translateY(-2px); /* Hover chesinappudu koncham paiki legustundi */
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
@@ -488,7 +488,7 @@
 .know-more-btn {
     display: inline-block;
     padding: 10px 25px;
-    background: #0193bc;
+    background: #20b1aa;
     color: #fff;
     text-decoration: none;
     border-radius: 25px;
@@ -497,7 +497,7 @@
 }
 
 .know-more-btn:hover {
-    background: #0193bc;
+    background: #20b1aa;
 }
 /* MOBILE VIEW */
 @media (max-width: 768px) {

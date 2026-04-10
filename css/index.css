@@ -44,7 +44,7 @@
 }
 
 .info-item i {
-  color: #0193bc;
+  color: #20b1aa;
 }
 
 /* NAVBAR */
@@ -82,7 +82,7 @@
 .nav-links > li > a:hover,
 .nav-links > li > a.active {
  
-  color: #0193bc;
+  color: #20b1aa;
 }
 
 /* DROPDOWN LOGIC (Desktop) */
@@ -125,7 +125,7 @@
 
 .dropdown-menu li a:hover {
   background: #f1f1f1;
-  color: #0193bc;
+  color: #20b1aa;
   padding-left: 25px; /* Nice sliding effect */
 }
 
@@ -239,7 +239,7 @@
 }
 
 .btn:hover {
-  background: #0193bc;
+  background: #20b1aa;
   transform: translateY(-2px); /* Hover chesinappudu koncham paiki legustundi */
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
@@ -336,7 +336,7 @@
     left: 15px;
     width: 100%;
     height: 100%;
-    border: 2px solid #0193bc;
+    border: 2px solid #20b1aa;
     border-radius: 15px;
     z-index: -1;
 }
@@ -380,8 +380,8 @@
 }
 
 .hero-btn:hover {
-    background: #0193bc;
-    border-color: #0193bc;
+    background: #20b1aa;
+    border-color: #20b1aa;
     transform: translateY(-3px);
 }
 
@@ -465,11 +465,11 @@
 
 /* Professional Colors Variations */
 :root {
-    --primary-blue: #0193bc;
+    --primary-blue: #20b1aa;
     --dark-blue: #005f7a;
     --primary-orange: #ff6600;
     --dark-orange:#e65c00;
-    --bg-dark: #0193bc; /* Professional Dark Blue Background for Card */
+    --bg-dark: #20b1aa; /* Professional Dark Blue Background for Card */
 }
 
 .vinoda-about-section {
@@ -581,9 +581,9 @@
 }
 
 /* Button Color Variations based on your 2 colors */
-.dark-blue-btn { background-color: #0193bc; }
+.dark-blue-btn { background-color: #20b1aa; }
 .orange-btn { background-color: var(--dark-orange); }
-.light-blue-btn { background-color: #0193bc; }
+.light-blue-btn { background-color: #20b1aa; }
 .dark-orange-btn { background-color: var(--dark-orange); }
 
 .tab-btn:hover {
@@ -677,7 +677,7 @@
 
 
 :root {
-    --primary-blue: #0193bc;
+    --primary-blue: #20b1aa;
     --primary-orange: #ff6600;
     --dark-blue: #004b61;
 }
@@ -708,7 +708,7 @@
 }
 
 .services-sub {
-    color:#0193bc;
+    color:#20b1aa;
     font-size: 14px;
     letter-spacing: 2px;
     margin-bottom: 15px;
@@ -753,7 +753,7 @@
     box-shadow: 0 4px 15px rgba(0, 146, 188, 0.3);
 }
 
-.view-all-btn:hover { background: #0193bc; transform: translateY(-3px); }
+.view-all-btn:hover { background: #20b1aa; transform: translateY(-3px); }
 
 /* 2. Right Images Overlap Effect */
 .services-right-overlap {
@@ -826,7 +826,7 @@
 
 
 :root {
-    --primary-blue: #0193bc;
+    --primary-blue: #20b1aa;
     --primary-orange: #ff6600;
     --dark-blue: #004b61;
     --text-gray: #555;
@@ -1093,7 +1093,7 @@
 }
 
 .overlap-icon i {
-    color: #0193bc;
+    color: #20b1aa;
     font-size: 28px;
 }
 
@@ -1234,9 +1234,9 @@
 
 
 :root {
-    --vinoda-blue: #0193bc;
+    --vinoda-blue: #20b1aa;
     --vinoda-orange: #ff6600;
-    --dark-bg: #0193bc; /* Premium dark background */
+    --dark-bg: #20b1aa; /* Premium dark background */
 }
 
 .vinoda-insurance-section {
@@ -1356,7 +1356,7 @@
 
 
 :root {
-    --vinoda-blue: #0193bc;
+    --vinoda-blue: #20b1aa;
     --vinoda-orange: #ff6600;
 }
 
@@ -1528,7 +1528,7 @@
 .yellow-divider { width: 10px; height: 3px; background: #ff6600; margin: 20px auto; }
 
 .features-check { display: flex; justify-content: center; gap: 80px; margin-bottom: 50px; font-size: 14px; }
-.features-check i { color: #0193bc; margin-right: 5px; }
+.features-check i { color: #20b1aa; margin-right: 5px; }
 
 .btn-blue { background: #005f7a; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; margin-right: 10px; }
 .btn-yellow { background:#cc5200;; color: #001a4d; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; }
@@ -1635,7 +1635,7 @@
     .features-check i {
         font-size: 13px;
         text-align: center;
-        color: #0193bc;
+        color: #20b1aa;
     }
 
     /* ===== BUTTONS SIDE BY SIDE ===== */
@@ -1725,7 +1725,7 @@
 
 
 :root {
-    --primary-blue: #0193bc;
+    --primary-blue: #20b1aa;
     --primary-orange: #ff6600;
     --dark-blue: #004b61;
 }
@@ -1866,7 +1866,7 @@
 
 /* LEFT FORM BOX */
 .form-container {
-    background-color: #0193bc; /* Navy Blue Box */
+    background-color: #20b1aa; /* Navy Blue Box */
     padding: 45px;
     border-radius: 10px;
     color: white;
