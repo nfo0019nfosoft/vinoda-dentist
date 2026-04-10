@@ -49,7 +49,7 @@
 
 /* NAVBAR */
 .navbar {
-  background: #20b1aa;
+  background: #ff6600;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -82,7 +82,7 @@
 .nav-links > li > a:hover,
 .nav-links > li > a.active {
  
-  color: #ff6600;
+  color: #20b1aa;
 }
 
 /* DROPDOWN LOGIC (Desktop) */
@@ -94,7 +94,7 @@
   position: absolute;
   top: 100%; /* Fixes the gap issue */
   left: 0;
-  background: white;
+  background: #ff6600;
   min-width: 200px;
   display: none;
   flex-direction: column;
@@ -116,7 +116,7 @@
 
 .dropdown-menu li a {
   padding: 12px 20px;
-  color: #333;
+  color: white;
   text-decoration: none;
   font-size: 15px;
   display: block;
@@ -175,7 +175,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background: #007da1;
+    background:#ff6600;
     flex-direction: column;
     display: none;
     max-height: 80vh;
@@ -200,7 +200,7 @@
   .dropdown-menu {
     position: static;
     width: 100%;
-    background: #20b1aa;
+    background: #ff6600;
     box-shadow: none;
     border-radius: 0;
     padding: 0;
@@ -555,4 +555,355 @@
     .info-card {
         font-size: 15px;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- MAIN FOOTER --- */
+.main-footer {
+    background-color: #005f7a; /* Mee current color */
+    color: #ffffff;
+    padding: 50px 0 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden; /* Side scrolling rakunda */
+}
+
+/* Container Alignment */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Top Section: Logo & Social */
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.footer-logo img { 
+    height: 70px; 
+    width: auto;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #ff6600;
+    transform: translateY(-3px);
+}
+
+/* Horizontal Line */
+.footer-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 35px;
+}
+
+/* Grid Layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    font-size: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* List Items - No Dots */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col p, 
+.footer-col ul li a {
+    color: #ffffff !important;
+    font-size: 14px;
+    line-height: 1.8;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #ff6600 !important;
+    padding-left: 5px;
+}
+
+/* Icons Style */
+.footer-col i { 
+    color: #ff6600 !important; /* Orange Icons */
+    margin-right: 10px; 
+    width: 20px;
+    text-align: center;
+}
+
+/* Business Hours - Tight & No Lines */
+.hours-list p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.orange-text { 
+    color: #ff6600 !important; 
+    font-weight: bold; 
+}
+
+/* --- FULL WIDTH GLASS BOTTOM BAR --- */
+.footer-bottom {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+    color: #ffffff !important;
+  
+    opacity: 0.8;
+}
+
+/* CONTACT BUTTON - Rounded Corners */
+.footer-book-btn {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #ffffff !important;
+    padding: 12px 25px;
+    margin-top: 20px;
+    
+    /* BORDER RADIUS IKKADA UNDI */
+    border-radius: 30px; /* Purti ga rounded (Capsule shape) kosam */
+    /* Leda koncheme curve kavali ante 8px pettochu */
+    
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 2px solid #ff6600;
+    text-align: center;
+}
+
+.footer-book-btn:hover {
+    background-color: transparent;
+    color: #ff6600 !important;
+    border-radius: 8px; /* Hover chesinappudu shape maruthundi - Stylish ga untundi */
+    transform: translateY(-3px);
+}
+.contact-info p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contact-info i {
+    margin-top: 5px; /* icon slightly down */
+    flex-shrink: 0;
+}
+@media (max-width: 600px) {
+
+    /* Top section left align */
+    .footer-top {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+    }
+
+    /* Grid → single column + left aligned */
+    .footer-grid { 
+        grid-template-columns: 1fr; 
+        text-align: left;
+        gap: 25px;
+    }
+
+    .footer-col {
+        text-align: left;
+    }
+
+    .footer-col h3 {
+        margin-bottom: 12px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        display: inline-block;
+        padding-right: 15px;
+    }
+
+    /* Hours spacing fix */
+    .hours-list p { 
+        justify-content: flex-start; 
+        gap: 20px;
+    }
+
+    /* 🔥 Button smaller + left aligned */
+    .footer-book-btn {
+        display: inline-block;   /* remove full width */
+        width: auto;             /* shrink to content */
+        border-radius: 8px;
+        padding: 10px 18px;      /* smaller size */
+        font-size: 12px;
+        margin-top: 15px;
+    }
+
+    /* 🔥 Bottom copyright centered */
+    .footer-bottom {
+        padding: 15px 10px;
+        text-align: center;  /* center only this */
+    }
+
+    .footer-bottom p {
+        text-align: center;
+        font-size: 12px;
+    }
+    .hours-list p {
+    display: grid;
+    grid-template-columns: 80px 1fr; /* fixed width for days */
+    margin-bottom: 6px !important;
+    align-items: center;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.floating-icons {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+/* Common Icon Style */
+.icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+/* WhatsApp */
+.whatsapp {
+  background: #25D366;
+}
+
+/* Phone */
+.phone {
+  background: #25D366;
+}
+
+/* Hover */
+.icon:hover {
+  transform: scale(1.15);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0,0,0, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(0,0,0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0,0,0, 0);
+  }
+}
+
+/* ✅ Desktop → only WhatsApp */
+@media (min-width: 768px) {
+  .phone {
+    display: none;
+  }
+}
+
+/* ✅ Mobile → both visible */
+@media (max-width: 767px) {
+  .phone {
+    display: flex;
+  }
 }
