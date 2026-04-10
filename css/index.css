@@ -94,7 +94,7 @@
   position: absolute;
   top: 100%; /* Fixes the gap issue */
   left: 0;
-  background: #ff6600;
+  background: #0193bc;
   min-width: 200px;
   display: none;
   flex-direction: column;
@@ -175,7 +175,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background:#ff6600;
+    background:#0193bc;
     flex-direction: column;
     display: none;
     max-height: 80vh;
@@ -200,7 +200,7 @@
   .dropdown-menu {
     position: static;
     width: 100%;
-    background: #ff6600;
+    background: #0193bc;
     box-shadow: none;
     border-radius: 0;
     padding: 0;
