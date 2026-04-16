@@ -140,7 +140,7 @@
 
   .top-left,
   .top-right {
-    justify-content: center;
+    justify-content: left;
     font-size: 12px;
   }
 
