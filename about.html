@@ -165,17 +165,27 @@
             navLinks.classList.toggle('active');
         };
 
-        document.querySelectorAll('.dropdown > a, .has-sub > a').forEach(function (btn) {
-            btn.onclick = function (e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    var next = this.nextElementSibling;
-                    if (next) {
-                        next.classList.toggle('show');
-                    }
+      document.querySelectorAll('.dropdown > a, .has-sub > a').forEach(function (btn) {
+    btn.onclick = function (e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+
+            let currentMenu = this.nextElementSibling;
+
+            // 🔥 CLOSE ALL OTHER MENUS
+            document.querySelectorAll('.dropdown-menu, .sub-menu').forEach(menu => {
+                if (menu !== currentMenu) {
+                    menu.classList.remove('show');
                 }
-            };
-        });
+            });
+
+            // 🔥 TOGGLE CURRENT
+            if (currentMenu) {
+                currentMenu.classList.toggle('show');
+            }
+        }
+    };
+});
 
     </script>
 

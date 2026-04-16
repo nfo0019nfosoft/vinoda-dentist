@@ -148,6 +148,7 @@
   .header-container {
     flex-direction: column;
     gap: 15px;
+    line-height: 2px;
     padding: 0 15px;
     text-align: center;
   }
