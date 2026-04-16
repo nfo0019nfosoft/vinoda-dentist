@@ -11,40 +11,178 @@
   max-width: 1200px;
   margin: auto;
 }
-
-/* TOPBAR */
-.topbar {
-  background: #f8f9fa;
-  padding: 12px 0;
-  border-bottom: 1px solid #ddd;
+/* TOP BLACK BAR */
+.top-info-bar {
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+  padding: 12px 0; /* 🔥 increased height */
 }
 
-.topbar-content {
+.top-info-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 50px; /* 🔥 balanced spacing */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-left,
+.top-right {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  gap: 10px;
+}
+
+.top-info-bar i {
+  color: #ff7a00;
+  font-size: 14px;
+}
+
+/* MAIN HEADER */
+.main-header {
+  background: #fff;
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 50px; /* 🔥 clean alignment */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo {
-  height: 50px;
-  display: block;
+/* LOGO */
+.header-logo img {
+  height: 60px;
 }
 
-.center-info {
+/* CENTER */
+.header-center {
   display: flex;
-  gap: 25px;
+  align-items: center;
+  gap: 20px;
 }
 
-.info-item {
+/* PHONE BOX */
+.phone-box {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
-  color: #444;
+  border: 2px solid #ff7a00;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
 }
 
-.info-item i {
-  color: #20b1aa;
+.phone-box i {
+  color: #ff7a00;
+}
+
+/* APPOINTMENT BUTTON */
+.appointment-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid #ff7a00;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+/* 🔥 ICON ORANGE */
+.appointment-btn i {
+  color: #ff7a00;
+}
+
+.appointment-btn:hover {
+  background: #ff7a00;
+  color: #fff;
+}
+
+.appointment-btn:hover i {
+  color: #fff;
+}
+
+/* SOCIAL ICONS */
+.header-social {
+  display: flex;
+  gap: 18px;
+}
+
+.header-social a {
+  color: #333;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.header-social a:hover {
+  color: #ff7a00;
+}
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  /* TOP BAR */
+  .top-info-container {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .top-left,
+  .top-right {
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  /* HEADER */
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  /* LOGO */
+  .header-logo img {
+    height: 50px;
+  }
+
+  /* CENTER (PHONE + BUTTON) */
+  .header-center {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .phone-box,
+  .appointment-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* SOCIAL ICONS */
+  .header-social {
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+
+
+/* CONTAINER CONTROL */
+.nav-container {
+  max-width: 100%;   /* 🔥 control navbar width */
+  margin: auto;        /* center */
+  padding: 0 40px;     /* left-right spacing */
 }
 
 /* NAVBAR */
@@ -56,28 +194,30 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* NAV CONTENT */
 .nav-content {
   display: flex;
-  justify-content: center; /* Centers links on desktop */
+  justify-content: space-between; /* 🔥 better than center */
   align-items: center;
-  padding: 0; /* Let links handle padding for bigger click area */
 }
 
-/* NAV LINKS */
+/* MENU CENTER ALIGN */
 .nav-links {
   list-style: none;
   display: flex;
-  margin: 0;
+  margin: 0 auto; /* 🔥 centers menu */
 }
 
+/* LINKS */
 .nav-links > li > a {
   display: block;
-  padding: 20px 25px;
+  padding: 15px 18px;
   color: white;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
 }
+
 
 .nav-links > li > a:hover,
 .nav-links > li > a.active {
@@ -1068,7 +1208,7 @@
 
 .card-img {
     position: relative;
-    height: 200px;
+    height: 250px;
 }
 
 .card-img img {
@@ -1077,37 +1217,21 @@
     object-fit: cover;
 }
 
-.overlap-icon {
-    position: absolute;
-    bottom: -25px;
-    left: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: white;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    z-index: 5;
-}
-
-.overlap-icon i {
-    color: #20b1aa;
-    font-size: 28px;
-}
 
 .blue-footer {
     background-color: #20b1aa; /* Blue Box */
     padding: 45px 25px 30px 25px;
     color: white;
     flex-grow: 1;
+   
     text-align: left;
 }
 
 .blue-footer h3 {
-    font-size: 20px;
-    margin: 0 0 12px 0;
+    font-size: 18px;
+    font-weight: 700;
+    margin: -25px 0 12px 0;
+    
 }
 
 .blue-footer p {

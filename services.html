@@ -16,109 +16,70 @@
 
 <body>
 
-    <!-- TOPBAR -->
-    <div class="topbar">
-        <div class="container topbar-content">
+   <!-- TOP INFO BAR -->
+<div class="top-info-bar">
+  <div class="top-info-container">
 
-            <!-- LEFT -->
-            <div class="left">
-                <a href="index.html">
-                    <img src="images/logo.png" class="logo">
-                </a>
-            </div>
-
-            <!-- CENTER -->
-            <div class="center-info">
-                <div class="info-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Vinoda Hospital, Hanamkonda, Warangal</span>
-                </div>
-
-                <div class="info-item">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>+91 98854 32424</span>
-                </div>
-            </div>
-
-            <!-- RIGHT -->
-            <div class="right">
-                <a href="contact.html" class="btn">Schedule Appointment</a>
-            </div>
-
-        </div>
+    <div class="top-left">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>H.No :1-8-23/A, Kaloji Marg, opposite Hayagrivachary Ground, Balasamudram, Hanamkonda, Telangana</span>
     </div>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="container nav-content">
+    <div class="top-right">
+      <i class="fa-solid fa-envelope"></i>
+      <span>info@vinodadental.com</span>
+    </div>
 
-            <!-- HAMBURGER -->
-            <div class="menu-toggle" id="menu-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+  </div>
+</div>
 
-            <!-- MENU -->
-            <ul class="nav-links" id="nav-links">
+<!-- MAIN HEADER -->
+<header class="main-header">
+  <div class="header-container">
 
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+    <!-- LOGO -->
+    <div class="header-logo">
+      <img src="images/logo.png" alt="logo">
+    </div>
 
-                <li class="dropdown">
-                    <a href="#">Services ▾</a>
+    <!-- CENTER INFO -->
+    <div class="header-center">
+      <div class="phone-box">
+        <i class="fa-solid fa-phone"></i>
+        <span>+91 98854 32424</span>
+      </div>
 
-                    <ul class="dropdown-menu">
-                        <li><a href="services.html">General Dentistry</a></li>
-                        <li><a href="services.html">Cosmetic Dentistry</a></li>
-                        <li><a href="services.html">Braces</a></li>
-                    </ul>
-                </li>
+      <a href="contact.html" class="appointment-btn">
+        <i class="fa-solid fa-calendar-check"></i>
+        Appointment
+      </a>
+    </div>
 
-                <li><a href="contact.html">Contact</a></li>
+    <!-- SOCIAL ICONS -->
+  <div class="header-social">
 
-            </ul>
+  <a href="#" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
 
-        </div>
-    </nav>
+  <a href="https://www.facebook.com/vinodadental" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+
+  <a href="https://www.instagram.com/vinoda_dental/" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://www.google.com/search?q=vinoda+hospital" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-google"></i>
+  </a>
+
+</div>
+  </div>
+</header>
+  
 
 
-
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    // 1. మొబైల్ మెనూ (Hamburger) ఓపెన్/క్లోజ్ చేయడానికి
-    toggle.onclick = (e) => {
-        e.stopPropagation();
-        navLinks.classList.toggle('active');
-    };
-
-    // 2. సర్వీసెస్ (Dropdown) క్లిక్ చేసినప్పుడు సబ్‌మెనూ చూపించడానికి
-    // ఇక్కడ '切换' తీసేసి కరెక్ట్ చేశాను
-    document.querySelectorAll('.dropdown > a').forEach(dropdownBtn => {
-        dropdownBtn.addEventListener('click', function (e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault(); // పేజీ రీలోడ్ అవ్వకుండా ఆపుతుంది
-                e.stopPropagation(); // ఇది చాలా ముఖ్యం - క్లిక్ ఈవెంట్ బయటకు వెళ్లకుండా ఆపుతుంది
-                
-                const menu = this.nextElementSibling;
-                
-                // మిగతా డ్రాప్‌డౌన్‌లు ఏవైనా ఓపెన్ ఉంటే వాటిని క్లోజ్ చేయడానికి (Optional)
-                document.querySelectorAll('.dropdown-menu').forEach(m => {
-                    if (m !== menu) m.classList.remove('show');
-                });
-
-                // ప్రస్తుత మెనూని టోగుల్ చేస్తుంది
-                menu.classList.toggle('show');
-            }
-        });
-    });
-
-    // 3. స్క్రీన్ మీద ఎక్కడ క్లిక్ చేసినా మెనూలు క్లోజ్ అవ్వడానికి
-    document.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('show'));
-    });
-</script>
 
 
 
@@ -167,11 +128,10 @@
   <div class="container">
     <h2>About General Dentistry</h2>
     <p>
-      Our General Dentistry department provides  the comprehensive diagnostic, preventive, and restorative dental care for patients of all ages. From routine oral check-ups and professional cleaning to advanced cavity fillings and gum health management, we ensure painless, ethical, and modern treatment for every smile.
+      Our General Dentistry department provides  the comprehensive diagnostic  and restorative dental care for patients of all ages. From routine oral check-ups and professional cleaning to advanced cavity fillings and gum health management, we ensure painless, ethical, and modern treatment for every smile.
     </p>
   </div>
 </section>
-
 
 
 
@@ -180,62 +140,216 @@
     <div class="container">
         <h2 class="main-title">Our General Dentistry Sub-Services</h2>
 
+        <!-- 1 -->
         <div class="sub-service-card" data-aos="fade-up">
             <div class="service-info">
-                <h3><i class="fa-solid fa-teeth"></i> Dental Braces</h3>
-                <p>Straighten teeth effectively with customised orthodontic braces for all ages. We ensure perfect alignment for a confident smile.</p>
+                <h3>Dental Cleanings</h3>
+                <p>Professional cleaning removes plaque and tartar buildup while protecting your gums. It helps prevent cavities and bad breath, keeping your smile fresh. Regular cleanings are essential for maintaining long-term oral health.</p>
                 <ul class="service-points">
-                    <li><i class="fa-solid fa-circle-check"></i> Metal & Ceramic Braces</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Invisible Aligners</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Teen & Adult Orthodontics</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Plaque Removal</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Stain Cleaning</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Routine Checkup</li>
                 </ul>
-                
             </div>
             <div class="service-image">
-                <img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Braces">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
             </div>
         </div>
 
+        <!-- 2 -->
         <div class="sub-service-card reverse" data-aos="fade-up">
             <div class="service-info">
-                <h3><i class="fa-solid fa-plug"></i> Dental Implants</h3>
-                <p>Restore missing teeth with durable, natural-looking dental implants for a permanent fix and better chewing ability.</p>
+                <h3>Dental Sealants</h3>
+                <p>Dental sealants act as a protective layer over teeth to prevent decay and damage. They are especially effective for children and cavity-prone teeth. This quick and painless procedure offers long-lasting protection.</p>
                 <ul class="service-points">
-                    <li><i class="fa-solid fa-circle-check"></i> Single Tooth Replacement</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Full Mouth Implants</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Bone Grafting Services</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Cavity Protection</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Quick Procedure</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Long-Lasting Care</li>
                 </ul>
-               
             </div>
             <div class="service-image">
-                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Implants">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
             </div>
         </div>
 
+        <!-- 3 -->
         <div class="sub-service-card" data-aos="fade-up">
             <div class="service-info">
-                <h3><i class="fa-solid fa-tooth"></i> Teeth Whitening</h3>
-                <p>Enhance your smile with professional cosmetic treatments for brighter, whiter teeth in just one session.</p>
+                <h3>Dentistry For Kids</h3>
+                <p>We provide gentle and friendly dental care specially designed for children’s comfort. Our focus is on prevention, education, and building healthy habits early. This helps ensure strong and healthy smiles as they grow.</p>
                 <ul class="service-points">
-                    <li><i class="fa-solid fa-circle-check"></i> Instant Laser Whitening</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Stain Removal</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Take-home Kits</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Child-Friendly Care</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Preventive Treatments</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Growth Monitoring</li>
                 </ul>
             </div>
             <div class="service-image">
-                <img src="https://images.pexels.com/photos/6612711/pexels-photo-6612711.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Whitening">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="sub-service-card reverse" data-aos="fade-up">
+            <div class="service-info">
+                <h3>Fillings</h3>
+                <p>Dental fillings restore damaged or decayed teeth using strong and natural-looking materials. They help prevent further decay and maintain tooth structure. This ensures durability and proper function for everyday use.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Cavity Repair</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Tooth Protection</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Durable Results</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="sub-service-card" data-aos="fade-up">
+            <div class="service-info">
+                <h3>Laser Assisted Periodontal Therapy</h3>
+                <p>This advanced laser treatment effectively treats gum disease with precision and minimal discomfort. It reduces bleeding and speeds up healing time. Patients benefit from a safer and more comfortable experience.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Gum Treatment</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Less Discomfort</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Quick Recovery</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="sub-service-card reverse" data-aos="fade-up">
+            <div class="service-info">
+                <h3>Oral Cancer Screenings</h3>
+                <p>Oral cancer screenings help detect abnormal tissues early before they become serious. The process is quick, painless, and highly important. Regular screenings improve chances of early treatment and prevention.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Early Detection</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Routine Screening</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Preventive Care</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="sub-service-card" data-aos="fade-up">
+            <div class="service-info">
+                <h3>Root Canal Therapy</h3>
+                <p>Root canal therapy removes infection from inside the tooth and saves your natural structure. It eliminates pain and prevents further damage effectively. This treatment restores normal function and long-term stability.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Pain Relief</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Tooth Saving</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Long-Term Fix</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="sub-service-card reverse" data-aos="fade-up">
+            <div class="service-info">
+                <h3>Scaling & Root Planing</h3>
+                <p>Scaling and root planing is a deep cleaning procedure that removes plaque below the gums. It treats early gum disease and prevents further complications. This improves gum health and supports strong teeth.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Deep Cleaning</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Gum Care</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Bacteria Removal</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="sub-service-card" data-aos="fade-up">
+            <div class="service-info">
+                <h3>Sleep Apnea Treatment</h3>
+                <p>Sleep apnea treatment improves breathing patterns during sleep and reduces snoring issues. It enhances sleep quality and overall health significantly. Custom solutions are designed for maximum comfort and results.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Custom Devices</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Better Sleep</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Snoring Control</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="sub-service-card reverse" data-aos="fade-up">
+            <div class="service-info">
+                <h3>Sleep Dentistry (Nitrous and Oral)</h3>
+                <p>Sleep dentistry uses safe sedation methods to make treatments comfortable and stress-free. It is ideal for anxious or sensitive patients. This approach ensures a relaxed and smooth dental experience.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Nitrous Sedation</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Oral Sedation</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Comfortable Care</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="sub-service-card" data-aos="fade-up">
+            <div class="service-info">
+                <h3>Tooth Extractions</h3>
+                <p>Tooth extraction is performed safely to remove severely damaged or infected teeth. It helps prevent the spread of infection and pain. Modern techniques ensure quick recovery and minimal discomfort.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Simple Removal</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Pain Control</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Fast Healing</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
+            </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="sub-service-card reverse" data-aos="fade-up">
+            <div class="service-info">
+                <h3>TMJ Therapy</h3>
+                <p>TMJ therapy treats jaw pain, stiffness, and alignment issues effectively. It improves jaw movement and reduces discomfort during daily activities. Customized treatments ensure better long-term relief.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Pain Relief</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Bite Alignment</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Custom Therapy</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
+            </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="sub-service-card" data-aos="fade-up">
+            <div class="service-info">
+                <h3>Wisdom Teeth Removal</h3>
+                <p>Wisdom teeth removal is done to prevent pain, crowding, and infections in the mouth. Impacted teeth are treated carefully with modern techniques. Recovery is smooth with proper guidance and care.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Impacted Removal</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Pain Prevention</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Aftercare Support</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
             </div>
         </div>
 
     </div>
 </section>
-
-
-
-
-
-
-
 
 
 
@@ -274,10 +388,12 @@
   <div class="container">
     <h2>About Cosmetic Dentistry</h2>
     <p>
-      Our Cosmetic Dentistry department is dedicated to enhancing the beauty and confidence of your smile. We offer a full range of aesthetic dental treatments, including teeth whitening, veneers, smile makeovers, and tooth reshaping, all tailored to your individual needs. Using advanced techniques and modern technology, we ensure safe, painless, and natural-looking results. Whether you want a brighter smile or a complete transformation, our expert team is committed to delivering exceptional care with precision and artistry.
+      Our Cosmetic Dentistry department is dedicated to enhancing the beauty and confidence of your smile. We offer a full range of aesthetic dental treatments, including teeth whitening, veneers, smile makeovers, and tooth reshaping, all tailored to your individual needs. Using advanced techniques and modern technology, we ensure safe, painless, and natural-looking results.
     </p>
   </div>
 </section>
+
+
 
 
 
@@ -287,60 +403,88 @@
     <div class="container">
         <h2 class="main-title">Our Cosmetic Dentistry Sub-Services</h2>
 
+        <!-- 1 -->
         <div class="sub-service-card" data-aos="fade-up">
             <div class="service-info">
-                <h3><i class="fa-solid fa-teeth"></i> Dental Braces</h3>
-                <p>Straighten teeth effectively with customised orthodontic braces for all ages. We ensure perfect alignment for a confident smile.</p>
+                <h3>Veneers</h3>
+                <p>Enhance your smile with custom-made veneers that cover imperfections like stains, chips, or gaps. They provide a natural and long-lasting aesthetic improvement for a confident look.</p>
                 <ul class="service-points">
-                    <li><i class="fa-solid fa-circle-check"></i> Metal & Ceramic Braces</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Invisible Aligners</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Teen & Adult Orthodontics</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Smile Makeover</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Stain & Gap Coverage</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Natural Appearance</li>
                 </ul>
-               
             </div>
             <div class="service-image">
-                <img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Braces">
+                <img src="https://images.pexels.com/photos/6612711/pexels-photo-6612711.jpeg" alt="">
             </div>
         </div>
 
+        <!-- 2 -->
         <div class="sub-service-card reverse" data-aos="fade-up">
             <div class="service-info">
-                <h3><i class="fa-solid fa-plug"></i> Dental Implants</h3>
-                <p>Restore missing teeth with durable, natural-looking dental implants for a permanent fix and better chewing ability.</p>
+                <h3>Componeers</h3>
+                <p>Componeers are a minimally invasive cosmetic solution that instantly improves the appearance of your teeth. They are applied directly for quick and effective smile enhancement.</p>
                 <ul class="service-points">
-                    <li><i class="fa-solid fa-circle-check"></i> Single Tooth Replacement</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Full Mouth Implants</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Bone Grafting Services</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Instant Results</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Minimally Invasive</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Cost-Effective Option</li>
                 </ul>
-               
             </div>
             <div class="service-image">
-                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Implants">
+                <img src="https://images.pexels.com/photos/6612711/pexels-photo-6612711.jpeg" alt="">
             </div>
         </div>
 
+        <!-- 3 -->
         <div class="sub-service-card" data-aos="fade-up">
             <div class="service-info">
-                <h3><i class="fa-solid fa-tooth"></i> Teeth Whitening</h3>
-                <p>Enhance your smile with professional cosmetic treatments for brighter, whiter teeth in just one session.</p>
+                <h3>Dental Crowns and Bridges</h3>
+                <p>Restore damaged or missing teeth with durable crowns and bridges designed for strength and aesthetics. They help maintain proper bite and improve overall oral function.</p>
                 <ul class="service-points">
-                    <li><i class="fa-solid fa-circle-check"></i> Instant Laser Whitening</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Stain Removal</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Take-home Kits</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Tooth Restoration</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Missing Teeth Solution</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Strong & Durable</li>
                 </ul>
-               
             </div>
             <div class="service-image">
-                <img src="https://images.pexels.com/photos/6612711/pexels-photo-6612711.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Whitening">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="sub-service-card reverse" data-aos="fade-up">
+            <div class="service-info">
+                <h3>Implant Dentures</h3>
+                <p>Secure and comfortable dentures supported by dental implants for improved stability. They offer better chewing ability and a more natural feel compared to traditional dentures.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Implant Support</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Better Stability</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Enhanced Comfort</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="sub-service-card" data-aos="fade-up">
+            <div class="service-info">
+                <h3>E-Max Crowns</h3>
+                <p>E-Max crowns are high-quality ceramic restorations known for their strength and natural look. They are ideal for restoring front teeth with superior aesthetics.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Premium Aesthetics</li>
+                    <li><i class="fa-solid fa-circle-check"></i> High Strength</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Long-Lasting Results</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/6612711/pexels-photo-6612711.jpeg" alt="">
             </div>
         </div>
 
     </div>
 </section>
-
-
-
-
 
 
 
@@ -371,10 +515,10 @@
       <i class="fa-solid fa-teeth"></i>
     </div>
     
-    <h1>Braces </h1>
+    <h1>Orthodontics</h1>
     
     <div class="sub-text">
-      Metal Braces • Ceramic Braces • Clear Aligners • Smile Alignment
+      Braces • Clear Aligners • Bite Correction • Smile Alignment
     </div>
   </div>
 </section>
@@ -382,15 +526,11 @@
 
 
 
-
-
-
-
 <section class="about-service">
   <div class="container">
-    <h2>About Braces </h2>
+    <h2>About Orthodontics</h2>
     <p>
-      Our Braces department focuses on correcting misaligned teeth and improving overall dental structure for a healthier, more confident smile. We offer advanced solutions including metal braces, ceramic braces, and clear aligners tailored to patients of all ages. With modern techniques and personalized treatment plans, we ensure comfortable, effective, and aesthetically pleasing results while enhancing both function and appearance.
+      Our Orthodontics department focuses on correcting misaligned teeth and jaw irregularities to improve both function and appearance. We provide advanced treatments including braces,  and preventive orthodontic care for children and adults. With modern techniques and personalized treatment plans, we ensure comfortable, effective, and long-lasting results that enhance your smile and overall oral health.
     </p>
   </div>
 </section>
@@ -404,63 +544,165 @@
 
 
 
-
-
-
 <section class="sub-services-section">
     <div class="container">
-        <h2 class="main-title">Our Braces Sub-Services</h2>
+        <h2 class="main-title">Our Orthodontic Sub-Services</h2>
 
+        <!-- 1 -->
         <div class="sub-service-card" data-aos="fade-up">
             <div class="service-info">
-                <h3><i class="fa-solid fa-teeth"></i> Dental Braces</h3>
-                <p>Straighten teeth effectively with customised orthodontic braces for all ages. We ensure perfect alignment for a confident smile.</p>
+                <h3>Clear Correct</h3>
+                <p>ClearCorrect aligners offer a discreet way to straighten teeth without metal braces. They are custom-made for comfort and gradually shift teeth into proper alignment.</p>
                 <ul class="service-points">
-                    <li><i class="fa-solid fa-circle-check"></i> Metal & Ceramic Braces</li>
                     <li><i class="fa-solid fa-circle-check"></i> Invisible Aligners</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Teen & Adult Orthodontics</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Comfortable Fit</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Removable Design</li>
                 </ul>
-             
             </div>
             <div class="service-image">
-                <img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Braces">
+                <img src="https://images.pexels.com/photos/6612711/pexels-photo-6612711.jpeg" alt="">
             </div>
         </div>
 
+        <!-- 2 -->
         <div class="sub-service-card reverse" data-aos="fade-up">
             <div class="service-info">
-                <h3><i class="fa-solid fa-plug"></i> Dental Implants</h3>
-                <p>Restore missing teeth with durable, natural-looking dental implants for a permanent fix and better chewing ability.</p>
+                <h3>Expander Therapy</h3>
+                <p>Expander therapy helps widen the upper jaw to correct bite issues and create space for proper tooth alignment. It is commonly used during early orthodontic treatment.</p>
                 <ul class="service-points">
-                    <li><i class="fa-solid fa-circle-check"></i> Single Tooth Replacement</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Full Mouth Implants</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Bone Grafting Services</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Jaw Expansion</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Bite Correction</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Early Treatment</li>
                 </ul>
-               
             </div>
             <div class="service-image">
-                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Implants">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
             </div>
         </div>
 
+        <!-- 3 -->
         <div class="sub-service-card" data-aos="fade-up">
             <div class="service-info">
-                <h3><i class="fa-solid fa-tooth"></i> Teeth Whitening</h3>
-                <p>Enhance your smile with professional cosmetic treatments for brighter, whiter teeth in just one session.</p>
+                <h3>Clear Aligner Therapy</h3>
+                <p>Clear aligners provide a modern solution for straightening teeth without visible braces. They are comfortable, removable, and designed for effective results.</p>
                 <ul class="service-points">
-                    <li><i class="fa-solid fa-circle-check"></i> Instant Laser Whitening</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Stain Removal</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Take-home Kits</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Nearly Invisible</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Easy Maintenance</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Effective Alignment</li>
                 </ul>
-               
             </div>
             <div class="service-image">
-                <img src="https://images.pexels.com/photos/6612711/pexels-photo-6612711.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Whitening">
+                <img src="https://images.pexels.com/photos/6612711/pexels-photo-6612711.jpeg" alt="">
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="sub-service-card reverse" data-aos="fade-up">
+            <div class="service-info">
+                <h3>Night and Athletic Guards</h3>
+                <p>Custom-made guards protect your teeth from grinding or sports injuries. They provide comfort, durability, and essential protection during sleep or physical activities.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Teeth Protection</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Custom Fit</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Durable Material</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="sub-service-card" data-aos="fade-up">
+            <div class="service-info">
+                <h3>Space Maintainers</h3>
+                <p>Space maintainers help keep space open for permanent teeth when baby teeth are lost early. They guide proper tooth eruption and prevent alignment issues.</p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Prevent Crowding</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Maintain Space</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Support Growth</li>
+                </ul>
+            </div>
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="">
             </div>
         </div>
 
     </div>
 </section>
+
+
+
+
+
+
+<section class="service-header">
+  <div class="container">
+    <div class="header-icon">
+      <i class="fa-solid fa-tooth"></i>
+    </div>
+    
+    <h1>Dental Implants</h1>
+    
+    <div class="sub-text">
+      Single Tooth Implants • Full Mouth Implants • Permanent Tooth Replacement • Bone Grafting
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="about-service">
+  <div class="container">
+    <h2>About Dental Implants</h2>
+    <p>
+      Dental implants are a permanent and reliable solution for replacing missing teeth. They are designed to look and function like natural teeth while restoring your smile and confidence. Our advanced implant procedures ensure strong support, improved chewing ability, long-lasting results with precision ans care.
+    </p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="sub-services-section">
+    <div class="container">
+
+        <div class="sub-service-card" data-aos="fade-up">
+            <div class="service-info">
+                <h3>Dental Implants</h3>
+                <p>
+                    Dental implants are a permanent solution for missing teeth that restore both function and appearance. 
+                    They are designed to look and feel like natural teeth, providing long-term stability and confidence.
+                </p>
+                <ul class="service-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Permanent Tooth Replacement</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Natural Look & Feel</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Improved Chewing Ability</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Long-Lasting Solution</li>
+                </ul>
+            </div>
+
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/3845811/pexels-photo-3845811.jpeg" alt="Dental Implants">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
 
 
 
@@ -485,11 +727,22 @@
                 <a href="index.html"><img src="images/logo.png" class="logo"></a>
             </div>
             <div class="social-links">
-                <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://www.facebook.com/vinodadental"><i class="fa-brands fa-facebook-f"></i></a>
-               
-                <a href="https://www.instagram.com/vinoda_dental/"><i class="fa-brands fa-instagram"></i></a>
-            </div>
+  
+  <!-- Same Tab -->
+  <a href="#">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
+
+  <!-- New Tab -->
+  <a href="https://www.facebook.com/vinodadental" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+
+  <a href="https://www.instagram.com/vinoda_dental/" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+</div>
         </div>
 
         <hr class="footer-divider">
