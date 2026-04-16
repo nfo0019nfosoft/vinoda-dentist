@@ -220,31 +220,31 @@
                 <h2>REQUEST AN APPOINTMENT</h2>
                 <p>Call us at <span class="highlight-orange">+91 98854 32424</span> or complete the form.</p>
                 
-                <form id="appointmentForm">
-                    <div class="field-group">
-                        <label>Full Name:</label>
-                        <input type="text" placeholder="Enter your name" required>
-                    </div>
+             <form id="appointmentForm">
+    <div class="field-group">
+        <label>Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+    </div>
 
-                    <div class="field-group">
-                        <label>Phone:</label>
-                        <input type="tel" placeholder="Enter phone number" required>
-                    </div>
+    <div class="field-group">
+        <label>Phone:</label>
+        <input type="tel" id="phone" placeholder="Enter phone number" required>
+    </div>
 
-                    <div class="field-group">
-                        <label>Email:</label>
-                        <input type="email" placeholder="Enter email address" required>
-                    </div>
+    <div class="field-group">
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="Enter email address" required>
+    </div>
 
-                    <div class="field-group">
-                        <label>Message:</label>
-                        <textarea rows="4" placeholder="Your message here..." required></textarea>
-                    </div>
+    <div class="field-group">
+        <label>Message:</label>
+        <textarea id="message" rows="4" placeholder="Your message here..." required></textarea>
+    </div>
 
-                    <button type="submit" class="submit-btn">
-                        Send Message <i class="fa fa-rocket"></i>
-                    </button>
-                </form>
+    <button type="submit" class="submit-btn">
+        Send Message <i class="fa fa-rocket"></i>
+    </button>
+</form>
             </div>
 
             <div class="info-container">
@@ -302,7 +302,28 @@
 
 
 
+<script>
+document.getElementById("appointmentForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    let text = `New Appointment Request:%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Email: ${email}%0A
+Message: ${message}`;
+
+    let whatsappNumber = "919885432424"; // +91 remove chesi add cheyyali
+
+    let url = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+    window.open(url, "_blank");
+});
+</script>
 
 
 
