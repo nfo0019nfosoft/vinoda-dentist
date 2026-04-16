@@ -88,6 +88,106 @@
 
 
 
+    <nav class="navbar">
+
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+
+            <li class="dropdown">
+                <a href="#">Services ▾</a>
+
+                <ul class="dropdown-menu">
+
+                    <li class="has-sub">
+                        <a href="#">General Dentistry</a>
+                        <ul class="sub-menu">
+
+                            <li><a href="services.html">Dental Cleanings</a></li>
+                            <li><a href="services.html">Dental Sealants</a></li>
+                            <li><a href="services.html">Dentistry For Kids</a></li>
+                            <li><a href="services.html">Fillings</a></li>
+                            <li><a href="services.html">Laser Assisted Periodontal Therapy</a></li>
+                            <li><a href="services.html">Oral Cancer Screenings</a></li>
+                            <li><a href="services.html">Root Canal Therapy</a></li>
+                            <li><a href="services.html">Scaling & Root Planing</a></li>
+                            <li><a href="services.html">Sleep Apnea Treatment</a></li>
+                            <li><a href="services.html">Sleep Dentistry (Nitrous and Oral)</a></li>
+                            <li><a href="services.html">Tooth Extractions</a></li>
+                            <li><a href="services.html">TMJ Therapy</a></li>
+                            <li><a href="services.html">Wisdom Teeth Removal</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="has-sub">
+                        <a href="#">Cosmetic Dentistry</a>
+                        <ul class="sub-menu">
+
+                            <li><a href="services.html">Veneers</a></li>
+                            <li><a href="services.html">Componeers</a></li>
+                            <li><a href="services.html">Dental Crowns & Bridges</a></li>
+                            <li><a href="services.html">Implant Dentures</a></li>
+                            <li><a href="services.html">E-Max Crowns</a></li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="has-sub">
+                        <a href="#">Orthodontics</a>
+                        <ul class="sub-menu">
+
+                            <li><a href="services.html">Clear Correct</a></li>
+                            <li><a href="services.html">Expander Therapy</a></li>
+                            <li><a href="services.html">Clear Aligner Therapy</a></li>
+                            <li><a href="services.html">Night and Athletic Guards</a></li>
+                            <li><a href="services.html">Space Maintainers</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li><a href="services.html">Dental Implants</a></li>
+
+
+                </ul>
+            </li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+    </nav>
+
+
+    <script>
+
+        const toggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggle.onclick = function () {
+            navLinks.classList.toggle('active');
+        };
+
+        document.querySelectorAll('.dropdown > a, .has-sub > a').forEach(function (btn) {
+            btn.onclick = function (e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    var next = this.nextElementSibling;
+                    if (next) {
+                        next.classList.toggle('show');
+                    }
+                }
+            };
+        });
+
+    </script>
+
+
 
 
 

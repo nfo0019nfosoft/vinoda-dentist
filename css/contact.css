@@ -175,226 +175,175 @@
     gap: 12px;
   }
 }
-/* CONTAINER CONTROL */
-.nav-container {
-  max-width: 100%;   /* 🔥 control navbar width */
-  margin: auto;        /* center */
-  padding: 0 40px;     /* left-right spacing */
-}
 
-/* NAVBAR */
+
+
+
+
 .navbar {
   background: #ff6600;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* NAV CONTENT */
-.nav-content {
-  display: flex;
-  justify-content: space-between; /* 🔥 better than center */
-  align-items: center;
-}
-
-/* MENU CENTER ALIGN */
 .nav-links {
-  list-style: none;
   display: flex;
-  margin: 0 auto; /* 🔥 centers menu */
+  justify-content: center;
 }
 
-/* LINKS */
 .nav-links > li > a {
+  padding: 15px 20px;
+  color: #fff;
   display: block;
-  padding: 15px 18px;
-  color: white;
-  text-decoration: none;
   font-weight: 600;
-  transition: 0.3s;
+  font-size: 15px;
+  text-decoration: none;
 }
 
-
-.nav-links > li > a:hover,
-.nav-links > li > a.active {
- 
-  color: #20b1aa;
+.nav-links > li > a:hover {
+  background: rgba(0, 0, 0, 0.15);
 }
 
-/* DROPDOWN LOGIC (Desktop) */
 .dropdown {
   position: relative;
 }
 
 .dropdown-menu {
   position: absolute;
-  top: 100%; /* Fixes the gap issue */
+  top: 100%;
   left: 0;
   background: #ff6600;
+  min-width: 220px;
+  display: none;
+  z-index: 1001;
+
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.has-sub {
+  position: relative;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #e65c00;
   min-width: 200px;
   display: none;
-  flex-direction: column;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-  border-radius: 0 0 8px 8px;
-  overflow: hidden;
-  padding: 10px 0;
+  z-index: 1002;
 }
 
-/* This pseudo-element bridges any tiny gap so menu doesn't close */
-.dropdown::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 10px;
-}
-
-.dropdown-menu li a {
-  padding: 12px 20px;
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
+.has-sub:hover > .sub-menu {
   display: block;
-  transition: 0.2s;
 }
 
-.dropdown-menu li a:hover {
-  background: #f1f1f1;
-  color: #20b1aa;
-  padding-left: 25px; /* Nice sliding effect */
+.dropdown-menu a,
+.sub-menu a {
+  padding: 12px 18px;
+  display: block;
+  color: #fff;
+  font-size: 14px;
+
 }
 
-@media (min-width: 769px) {
-  .dropdown:hover .dropdown-menu {
-    display: flex;
-     flex-direction: column;
-  }
+.dropdown-menu a:hover,
+.sub-menu a:hover {
+  background: #fff;
+  color: #ff6600;
 }
-@media (max-width: 768px) {
-  .dropdown-menu.show {
-    display: flex !important; /* ఇక్కడ !important యాడ్ చేయండి */
-    flex-direction: column;
-  }
+
+.has-sub > a::after {
+  content: " ▸";
+  font-size: 11px;
 }
-/* MOBILE STYLES */
+
 .menu-toggle {
   display: none;
   color: white;
-  font-size: 24px;
+  font-size: 22px;
+  padding: 12px 15px;
   cursor: pointer;
-  padding: 15px;
+  text-align: right;
 }
 
 @media (max-width: 768px) {
-  .topbar-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-
-  .center-info {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .right {
-    margin-top: 10px;
-  }
 
   .menu-toggle {
     display: block;
   }
 
   .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background:#ff6600;
     flex-direction: column;
     display: none;
-    max-height: 80vh;
-    overflow-y: auto;
+    background: #ff6600;
   }
 
   .nav-links.active {
     display: flex;
   }
 
-  .nav-links > li {
-    width: 100%;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .nav-links > li > a {
-    padding: 15px;
-    text-align: center;
-  }
-
-  /* Mobile Dropdown */
-  .dropdown-menu {
+  .dropdown-menu,
+  .sub-menu {
     position: static;
-    width: 100%;
-    background: #ff6600;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 0;
+    display: none;
+    background: #d45500;
+    min-width: 100%;
+    border-top: none;
   }
 
-  .dropdown-menu.show {
-    display: flex;
+  .show {
+    display: block !important;
   }
 
-  .dropdown-menu li a {
-    color: white;
-    text-align: center;
-    background: rgba(0,0,0,0.1);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+  .dropdown-menu a {
+    padding-left: 36px;
   }
+
+  .sub-menu a {
+    padding-left: 54px;
+  }
+
+  .has-sub > a::after {
+    content: " ▾";
+  }
+
 }
-/* RIGHT SECTION (Button Wrapper) */
-.right {
-  display: flex;
-  align-items: center;
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-
-/* BUTTON STYLES */
-.btn {
-  background: #ff6600; /* Orange color stand out avvadaniki */
-  color: white;
-  padding: 12px 22px;
-  border-radius: 30px;
+.dropdown-menu a,
+.sub-menu a {
+  border-bottom: none;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  transition: all 0.3s ease;
-  display: inline-block;
-  white-space: nowrap; /* Text okka line lone untundi */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.btn:hover {
-  background: #20b1aa;
-  transform: translateY(-2px); /* Hover chesinappudu koncham paiki legustundi */
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+/* GENERAL SUBMENU SCROLL */
+.sub-menu {
+  max-height: 350px;   /* 🔥 control height */
+  overflow-y: auto;    /* 🔥 enable scroll */
 }
 
-/* MOBILE RESPONSIVENESS FOR BUTTON */
-@media (max-width: 768px) {
-  .right {
-    width: 100%;
-    justify-content: center; /* Mobile lo button center ki vasthundi */
-    margin-top: 10px;
-  }
-  
-  .btn {
-    width: 80%; /* Mobile lo button koncham peddaga kanipisthundi */
-    text-align: center;
-    padding: 10px;
-  }
+/* OPTIONAL: NICE SCROLL DESIGN */
+.sub-menu::-webkit-scrollbar {
+  width: 6px;
 }
+
+.sub-menu::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.sub-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 
 
 
