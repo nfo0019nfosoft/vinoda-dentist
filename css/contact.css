@@ -232,7 +232,7 @@
   position: absolute;
   top: 0;
   left: 100%;
-  background: #e65c00;
+  background: #ff8533;
   min-width: 200px;
   display: none;
   z-index: 1002;
@@ -291,7 +291,7 @@
   .sub-menu {
     position: static;
     display: none;
-    background: #d45500;
+    background: #ff8533;
     min-width: 100%;
     border-top: none;
   }
