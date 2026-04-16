@@ -119,13 +119,13 @@
 }
 
 .header-social a {
-  color: #333;
+  color: #ff7a00;
   font-size: 16px;
   transition: 0.3s;
 }
 
 .header-social a:hover {
-  color: #ff7a00;
+  color: #20b1aa;
 }
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
@@ -181,7 +181,7 @@
 
 
 .navbar {
-  background: #ff6600;
+  background: #ff8533;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -2268,7 +2268,7 @@ ul {
 
 /* --- MAIN FOOTER --- */
 .main-footer {
-    background-color: #005f7a; /* Mee current color */
+    background-color: #20b1aa; /* Mee current color */
     color: #ffffff;
     padding: 50px 0 0; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
