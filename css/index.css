@@ -1360,18 +1360,7 @@ ul {
     transition: 0.3s;
 }
 
-/* Orange Button */
-.btn-orang {
-    display: inline-block;
-    background-color: #ff6600;
-    color: white;
-    padding: 10px 22px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 13px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+
 .btn-orange:hover {
     background-color: white;
     color: #ff8533;

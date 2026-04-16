@@ -668,6 +668,8 @@ ul {
 
 
 
+
+
 /* --- MAIN FOOTER --- */
 .main-footer {
     background-color: #20b1aa; /* Mee current color */
@@ -717,7 +719,7 @@ ul {
 }
 
 .social-links a:hover {
-    background: #ff6600;
+    background: #ff8533;
     transform: translateY(-3px);
 }
 
@@ -766,13 +768,13 @@ ul {
 }
 
 .footer-col ul li a:hover {
-    color: #ff6600 !important;
+    color: #ff8533 !important;
     padding-left: 5px;
 }
 
 /* Icons Style */
 .footer-col i { 
-    color: #ff6600 !important; /* Orange Icons */
+    color: #ff8533 !important; /* Orange Icons */
     margin-right: 10px; 
     width: 20px;
     text-align: center;
@@ -788,7 +790,7 @@ ul {
 }
 
 .orange-text { 
-    color: #ff6600 !important; 
+    color: #ff8533 !important; 
     font-weight: bold; 
 }
 
@@ -815,7 +817,7 @@ ul {
 /* CONTACT BUTTON - Rounded Corners */
 .footer-book-btn {
     display: inline-block;
-    background-color: #ff6600;
+    background-color: #ff8533;
     color: #ffffff !important;
     padding: 12px 25px;
     margin-top: 20px;
@@ -829,13 +831,13 @@ ul {
     font-weight: 700;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    border: 2px solid #ff6600;
+    border: 2px solid #ff8533;
     text-align: center;
 }
 
 .footer-book-btn:hover {
     background-color: transparent;
-    color: #ff6600 !important;
+    color: #ff8533 !important;
     border-radius: 8px; /* Hover chesinappudu shape maruthundi - Stylish ga untundi */
     transform: translateY(-3px);
 }
@@ -912,11 +914,6 @@ ul {
     align-items: center;
 }
 }
-
-
-
-
-
 
 
 
